@@ -1,0 +1,120 @@
+{
+  "ir_version": "1.0",
+  "project": "omniobserve",
+  "repository": "https://github.com/agentplexus/omniobserve",
+  "versioning": "semver",
+  "commit_convention": "conventional",
+  "maintainers": ["agentplexus"],
+  "releases": [
+    {
+      "version": "v0.5.1",
+      "date": "2026-01-19",
+      "highlights": [
+        { "description": "Compatibility update for omnillm v0.11.0 with new multi-provider configuration API" }
+      ],
+      "changed": [
+        { "description": "Updated `ClientConfig` usage to new `Providers` slice API for omnillm v0.11.0 compatibility", "commit": "1ff102c" }
+      ],
+      "dependencies": [
+        { "description": "Upgraded `github.com/agentplexus/omnillm` from v0.10.0 to v0.11.0", "commit": "1ff102c" }
+      ],
+      "documentation": [
+        { "description": "Converted CHANGELOG to schangelog JSON format with commit references" }
+      ]
+    },
+    {
+      "version": "v0.5.0",
+      "date": "2026-01-03",
+      "highlights": [
+        { "description": "Comprehensive evaluation metrics for assessing LLM outputs with both code-based and LLM-based metrics" },
+        { "description": "Streamlined provider architecture with Opik and Phoenix adapters moved to standalone SDKs" }
+      ],
+      "added": [
+        { "description": "`AnnotationManager` interface for span/trace annotations with `CreateAnnotation` and `ListAnnotations` methods", "commit": "2baa46f" },
+        { "description": "`DatasetManager` methods: `GetDatasetByID` and `DeleteDataset`", "commit": "2baa46f" },
+        { "description": "Prompt model/provider options: `WithPromptModel`, `WithPromptProvider`, `ModelName`, `ModelProvider` fields", "commit": "7cea000" },
+        { "description": "OmniLLM hook auto-creates traces when none exists in context", "commit": "ef67b89" },
+        { "description": "Trace context helpers: `contextWithTrace` and `traceFromContext`", "commit": "7cea000" },
+        { "description": "`llmops/metrics` package with LLM-based metrics: `HallucinationMetric`, `RelevanceMetric`, `QACorrectnessMetric`, `ToxicityMetric`", "commit": "079fe35" },
+        { "description": "`llmops/metrics` package with code-based metrics: `ExactMatchMetric`, `RegexMetric`, `ContainsMetric`", "commit": "079fe35" },
+        { "description": "`examples/evaluation` demonstrating metrics usage", "commit": "f582c2a" }
+      ],
+      "changed": [
+        { "description": "Provider adapters moved to standalone SDKs: Opik to `github.com/agentplexus/go-opik/llmops`, Phoenix to `github.com/agentplexus/go-phoenix/llmops`", "breaking": true, "commit": "333f6fd" }
+      ],
+      "removed": [
+        { "description": "`llmops/opik` adapter (moved to go-opik)", "commit": "333f6fd" },
+        { "description": "`llmops/phoenix` adapter (moved to go-phoenix)", "commit": "333f6fd" },
+        { "description": "`sdk/phoenix` package (use go-phoenix directly)", "commit": "333f6fd" }
+      ],
+      "fixed": [
+        { "description": "Redundant newlines in example Println statements", "commit": "6758f68" }
+      ],
+      "documentation": [
+        { "description": "v0.5.0 documentation", "commit": "db6772d" },
+        { "description": "Updated presentation HTML", "commit": "05972b1" }
+      ],
+      "tests": [
+        { "description": "Metrics package unit tests", "commit": "526ba8b" }
+      ]
+    },
+    {
+      "version": "v0.4.0",
+      "date": "2025-12-27",
+      "highlights": [
+        { "description": "Full-stack observability with new agentops and observops packages for monitoring agentic AI systems" },
+        { "description": "Semantic conventions aligned with OpenTelemetry for standardized telemetry across LLM applications" }
+      ],
+      "added": [
+        { "description": "`agentops` package for agent operations monitoring", "commit": "0a0a370" },
+        { "description": "`observops` package for unified observability operations", "commit": "8d58179" },
+        { "description": "`semconv` package with semantic conventions for agentic AI", "commit": "5fea8e0" }
+      ],
+      "changed": [
+        { "description": "`llmops` refactored to use `github.com/agentplexus/omnillm`", "commit": "459d2d7" }
+      ],
+      "documentation": [
+        { "description": "Updated README, docs, and presentation", "commit": "dec1013" }
+      ],
+      "dependencies": [
+        { "description": "Go module dependencies updated", "commit": "4072e07" }
+      ]
+    },
+    {
+      "version": "v0.3.0",
+      "date": "2025-12-21",
+      "highlights": [
+        { "description": "Project renamed from observai to omniobserve for consistency with omnillm ecosystem naming" }
+      ],
+      "changed": [
+        { "description": "Project renamed from `observai` to `omniobserve` for consistency with `omnillm` naming conventions", "breaking": true, "commit": "e2b7a86" }
+      ]
+    },
+    {
+      "version": "v0.2.0",
+      "date": "2025-12-21",
+      "highlights": [
+        { "description": "FluxLLM integration enables observability for flux-based LLM workflows" }
+      ],
+      "added": [
+        { "description": "`integrations/fluxllm` package for FluxLLM observability", "commit": "ae3869f" }
+      ]
+    },
+    {
+      "version": "v0.1.0",
+      "date": "2025-12-20",
+      "highlights": [
+        { "description": "Initial release providing unified observability primitives for LLM applications with OpenTelemetry integration" }
+      ],
+      "added": [
+        { "description": "Core observability framework for LLM applications", "commit": "ce57c34" },
+        { "description": "GitHub Actions CI workflow", "commit": "b06ec1b" },
+        { "description": "GitHub Pages presentation", "commit": "39f3581" },
+        { "description": "MIT License", "commit": "ffec710" }
+      ],
+      "documentation": [
+        { "description": "README with shields and badges", "commit": "63cfe64" }
+      ]
+    }
+  ]
+}
