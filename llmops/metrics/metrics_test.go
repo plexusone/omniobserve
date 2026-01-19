@@ -388,8 +388,9 @@ func getTestLLM(t *testing.T) *LLM {
 	}
 
 	client, err := omnillm.NewClient(omnillm.ClientConfig{
-		Provider: omnillm.ProviderNameOpenAI,
-		APIKey:   apiKey,
+		Providers: []omnillm.ProviderConfig{
+			{Provider: omnillm.ProviderNameOpenAI, APIKey: apiKey},
+		},
 	})
 	if err != nil {
 		t.Fatalf("failed to create omnillm client: %v", err)

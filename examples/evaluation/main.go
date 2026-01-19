@@ -100,8 +100,9 @@ func main() {
 
 	// Create LLM client for metrics
 	llmClient, err := omnillm.NewClient(omnillm.ClientConfig{
-		Provider: omnillm.ProviderNameOpenAI,
-		APIKey:   apiKey,
+		Providers: []omnillm.ProviderConfig{
+			{Provider: omnillm.ProviderNameOpenAI, APIKey: apiKey},
+		},
 	})
 	if err != nil {
 		log.Fatalf("Failed to create LLM client: %v", err)
