@@ -100,20 +100,21 @@ func main() {
 | **Opik** | `go-opik/llmops` | Comet Opik - Open-source, full-featured |
 | **Langfuse** | `omniobserve/llmops/langfuse` | Cloud & self-hosted, batch ingestion |
 | **Phoenix** | `go-phoenix/llmops` | Arize Phoenix - OpenTelemetry-based |
+| **slog** | `omniobserve/llmops/slog` | Local structured logging for development/debugging |
 
 ### Provider Capabilities
 
-| Feature | Opik | Langfuse | Phoenix |
-|---------|:----:|:--------:|:-------:|
-| Tracing | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Evaluation | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Prompts | :white_check_mark: | Partial | :x: |
-| Datasets | :white_check_mark: | :white_check_mark: | Partial |
-| Experiments | :white_check_mark: | :white_check_mark: | Partial |
-| Streaming | :white_check_mark: | :white_check_mark: | Planned |
-| Distributed Tracing | :white_check_mark: | :x: | :white_check_mark: |
-| Cost Tracking | :white_check_mark: | :white_check_mark: | :x: |
-| OpenTelemetry | :x: | :x: | :white_check_mark: |
+| Feature | Opik | Langfuse | Phoenix | slog |
+|---------|:----:|:--------:|:-------:|:----:|
+| Tracing | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Evaluation | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
+| Prompts | :white_check_mark: | Partial | :x: | :x: |
+| Datasets | :white_check_mark: | :white_check_mark: | Partial | :x: |
+| Experiments | :white_check_mark: | :white_check_mark: | Partial | :x: |
+| Streaming | :white_check_mark: | :white_check_mark: | Planned | :x: |
+| Distributed Tracing | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| Cost Tracking | :white_check_mark: | :white_check_mark: | :x: | :x: |
+| OpenTelemetry | :x: | :x: | :white_check_mark: | :x: |
 
 ## Architecture
 

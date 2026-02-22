@@ -1,11 +1,34 @@
 {
-  "ir_version": "1.0",
+  "irVersion": "1.0",
   "project": "omniobserve",
   "repository": "https://github.com/agentplexus/omniobserve",
   "versioning": "semver",
-  "commit_convention": "conventional",
+  "commitConvention": "conventional",
   "maintainers": ["agentplexus"],
   "releases": [
+    {
+      "version": "v0.6.0",
+      "date": "2026-02-22",
+      "highlights": [
+        { "description": "Built-in slog provider for local trace logging during development and debugging" },
+        { "description": "Structured evaluation integration for connecting llmops with sevaluation workflows" }
+      ],
+      "added": [
+        { "description": "`llmops/slog` provider for local structured logging of trace events", "commit": "9b7dc4e" },
+        { "description": "`WithLogger` option in `ClientOptions` for custom slog.Logger configuration", "commit": "9b7dc4e" },
+        { "description": "`integrations/sevaluation` package for structured-evaluation integration", "commit": "a7816f6" }
+      ],
+      "fixed": [
+        { "description": "gosec warnings for APIKey struct fields (G117) and HTTP client SSRF (G704)", "commit": "7914c6a" }
+      ],
+      "documentation": [
+        { "description": "Observability integration guide for stats-agent-team", "commit": "4cdffaa" },
+        { "description": "README updated with slog provider in supported providers table", "commit": "" }
+      ],
+      "dependencies": [
+        { "description": "Upgraded `github.com/lib/pq` from v1.10.9 to v1.11.1", "commit": "3a1ccde" }
+      ]
+    },
     {
       "version": "v0.5.1",
       "date": "2026-01-19",
