@@ -1,6 +1,7 @@
 package llmops
 
 import (
+	"log/slog"
 	"net/http"
 	"time"
 )
@@ -350,6 +351,7 @@ type ClientOptions struct {
 	Timeout     time.Duration
 	Disabled    bool
 	Debug       bool
+	Logger      *slog.Logger // Optional: log trace events to slog
 }
 
 // WithAPIKey sets the API key for authentication.
@@ -405,6 +407,15 @@ func WithDisabled(disabled bool) ClientOption {
 func WithDebug(debug bool) ClientOption {
 	return func(o *ClientOptions) {
 		o.Debug = debug
+	}
+}
+
+// WithLogger sets an slog.Logger for local trace event logging.
+// When set, trace and span events are logged to this logger in addition
+// to being sent to the observability platform.
+func WithLogger(logger *slog.Logger) ClientOption {
+	return func(o *ClientOptions) {
+		o.Logger = logger
 	}
 }
 
