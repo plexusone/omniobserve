@@ -287,7 +287,7 @@ type Config struct {
 	Endpoint string
 
 	// APIKey is the API key for authentication.
-	APIKey string
+	APIKey string //nolint:gosec // G117: APIKey is intentionally stored for backend authentication
 
 	// Insecure disables TLS.
 	Insecure bool

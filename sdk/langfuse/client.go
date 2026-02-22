@@ -180,7 +180,7 @@ func (c *Client) sendBatch(ctx context.Context, events []Event) error {
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("User-Agent", "langfuse-go-sdk/"+Version)
 
-	resp, err := c.httpClient.Do(req)
+	resp, err := c.httpClient.Do(req) //nolint:gosec // G704: URL is constructed from configured endpoint, not user input
 	if err != nil {
 		return fmt.Errorf("send request: %w", err)
 	}
@@ -254,7 +254,7 @@ func (c *Client) doRequest(ctx context.Context, method, path string, body io.Rea
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("User-Agent", "langfuse-go-sdk/"+Version)
 
-	return c.httpClient.Do(req)
+	return c.httpClient.Do(req) //nolint:gosec // G704: URL is constructed from configured endpoint, not user input
 }
 
 // doGet performs a GET request.

@@ -189,7 +189,7 @@ func (c *AgentClient) Do(ctx context.Context, req *http.Request, toAgentID strin
 
 	// If no store, just execute the request
 	if store == nil {
-		return c.client.Do(req)
+		return c.client.Do(req) //nolint:gosec // G704: URL is from inter-agent communication, not user input
 	}
 
 	// Calculate payload size
@@ -220,13 +220,13 @@ func (c *AgentClient) Do(ctx context.Context, req *http.Request, toAgentID strin
 	handoff, err := store.RecordHandoff(ctx, c.cfg.FromAgentID, toAgentID, handoffOpts...)
 	if err != nil {
 		// Log error but continue with request
-		return c.client.Do(req)
+		return c.client.Do(req) //nolint:gosec // G704: URL is from inter-agent communication, not user input
 	}
 
 	startTime := time.Now()
 
 	// Execute the request
-	resp, err := c.client.Do(req)
+	resp, err := c.client.Do(req) //nolint:gosec // G704: URL is from inter-agent communication, not user input
 
 	latency := time.Since(startTime).Milliseconds()
 

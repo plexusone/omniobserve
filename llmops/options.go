@@ -343,7 +343,7 @@ type ClientOption func(*ClientOptions)
 
 // ClientOptions holds client configuration.
 type ClientOptions struct {
-	APIKey      string
+	APIKey      string //nolint:gosec // G117: APIKey is intentionally stored for provider authentication
 	Endpoint    string
 	Workspace   string
 	ProjectName string
