@@ -1,0 +1,73 @@
+site_name: OmniObserve
+site_description: Unified Go library for LLM and ML observability
+site_url: https://agentplexus.github.io/omniobserve
+repo_url: https://github.com/agentplexus/omniobserve
+repo_name: agentplexus/omniobserve
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep-purple
+      accent: deep-purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep-purple
+      accent: deep-purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quickstart.md
+      - Configuration: getting-started/configuration.md
+  - Providers:
+      - Overview: providers/index.md
+      - Opik: providers/opik.md
+      - Langfuse: providers/langfuse.md
+      - Phoenix: providers/phoenix.md
+      - slog: providers/slog.md
+  - Features:
+      - Tracing: features/tracing.md
+      - Evaluation Metrics: features/metrics.md
+      - Datasets: features/datasets.md
+      - Prompts: features/prompts.md
+  - Integrations:
+      - OmniLLM: integrations/omnillm.md
+      - Structured Evaluation: integrations/sevaluation.md
+  - Architecture: architecture.md
+  - Guides:
+      - Stats Agent Observability: guides/integration-guide-stats-agent-team.md
+  - API Reference: https://pkg.go.dev/github.com/agentplexus/omniobserve
+  - Releases:
+      - Changelog: releases/changelog.md
+      - v0.6.0: releases/v0.6.0.md
+      - v0.5.0: releases/v0.5.0.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/agentplexus/omniobserve
