@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	entgo.io/ent v0.14.5
-	github.com/agentplexus/omnillm v0.11.1
+	github.com/agentplexus/omnillm v0.12.0
 	github.com/agentplexus/structured-evaluation v0.2.0
 	github.com/google/uuid v1.6.0
 	github.com/lib/pq v1.11.2
