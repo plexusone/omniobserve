@@ -31,13 +31,13 @@ Providers are registered via blank imports:
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omniobserve/llmops"
 
     // Register one or more providers
     _ "github.com/agentplexus/go-opik/llmops"
-    _ "github.com/agentplexus/omniobserve/llmops/langfuse"
+    _ "github.com/plexusone/omniobserve/llmops/langfuse"
     _ "github.com/agentplexus/go-phoenix/llmops"
-    _ "github.com/agentplexus/omniobserve/llmops/slog"
+    _ "github.com/plexusone/omniobserve/llmops/slog"
 )
 
 // Open by name
@@ -49,7 +49,7 @@ provider, err := llmops.Open("opik", llmops.WithAPIKey("..."))
 For provider-specific features, use the underlying SDKs directly:
 
 ```go
-import "github.com/agentplexus/omniobserve/sdk/langfuse"  // Langfuse SDK
+import "github.com/plexusone/omniobserve/sdk/langfuse"  // Langfuse SDK
 import "github.com/agentplexus/go-opik"                   // Opik SDK
 import "github.com/agentplexus/go-phoenix"                // Phoenix SDK
 ```

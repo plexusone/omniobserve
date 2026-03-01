@@ -219,9 +219,9 @@ reusable helpers that minimize code changes:
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/agentops"
-    "github.com/agentplexus/omniobserve/agentops/middleware"
-    _ "github.com/agentplexus/omniobserve/agentops/postgres"
+    "github.com/plexusone/omniobserve/agentops"
+    "github.com/plexusone/omniobserve/agentops/middleware"
+    _ "github.com/plexusone/omniobserve/agentops/postgres"
 )
 
 // 1. Create a store
@@ -294,7 +294,7 @@ For manual instrumentation or OpenTelemetry integration:
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/semconv/agent"
+    "github.com/plexusone/omniobserve/semconv/agent"
     "go.opentelemetry.io/otel/attribute"
 )
 
@@ -327,7 +327,7 @@ These conventions are designed to be compatible with:
 
 - [OpenTelemetry GenAI Semantic Conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
 - [OpenTelemetry GenAI Agent Spans](https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-agent-spans/)
-- [OmniObserve](https://github.com/agentplexus/omniobserve)
+- [OmniObserve](https://github.com/plexusone/omniobserve)
 
 ## License
 

@@ -1,17 +1,21 @@
 {
   "irVersion": "1.0",
   "project": "omniobserve",
-  "repository": "https://github.com/agentplexus/omniobserve",
+  "repository": "https://github.com/plexusone/omniobserve",
   "versioning": "semver",
   "commitConvention": "conventional",
-  "maintainers": ["agentplexus"],
+  "maintainers": ["plexusone"],
   "releases": [
     {
       "version": "v0.6.0",
-      "date": "2026-02-22",
+      "date": "2026-03-01",
       "highlights": [
+        { "description": "Organization rename from agentplexus to plexusone" },
         { "description": "Built-in slog provider for local trace logging during development and debugging" },
         { "description": "Structured evaluation integration for connecting llmops with sevaluation workflows" }
+      ],
+      "changed": [
+        { "description": "**Breaking**: Module path changed from `github.com/agentplexus/omniobserve` to `github.com/plexusone/omniobserve`" }
       ],
       "added": [
         { "description": "`llmops/slog` provider for local structured logging of trace events", "commit": "9b7dc4e" },
@@ -23,10 +27,13 @@
       ],
       "documentation": [
         { "description": "Observability integration guide for stats-agent-team", "commit": "4cdffaa" },
-        { "description": "README updated with slog provider in supported providers table", "commit": "" }
+        { "description": "README updated with slog provider in supported providers table", "commit": "" },
+        { "description": "Updated all documentation to use new module path" }
       ],
       "dependencies": [
-        { "description": "Upgraded `github.com/lib/pq` from v1.10.9 to v1.11.1", "commit": "3a1ccde" }
+        { "description": "Upgraded `github.com/lib/pq` from v1.10.9 to v1.11.1", "commit": "3a1ccde" },
+        { "description": "Upgraded `github.com/plexusone/omnillm` from v0.11.1 to v0.13.0" },
+        { "description": "Upgraded `github.com/plexusone/structured-evaluation` from v0.2.0 to v0.3.0" }
       ]
     },
     {
@@ -39,7 +46,7 @@
         { "description": "Updated `ClientConfig` usage to new `Providers` slice API for omnillm v0.11.0 compatibility", "commit": "1ff102c" }
       ],
       "dependencies": [
-        { "description": "Upgraded `github.com/agentplexus/omnillm` from v0.10.0 to v0.11.0", "commit": "1ff102c" }
+        { "description": "Upgraded `github.com/plexusone/omnillm` from v0.10.0 to v0.11.0", "commit": "1ff102c" }
       ],
       "documentation": [
         { "description": "Converted CHANGELOG to schangelog JSON format with commit references" }
@@ -63,7 +70,7 @@
         { "description": "`examples/evaluation` demonstrating metrics usage", "commit": "f582c2a" }
       ],
       "changed": [
-        { "description": "Provider adapters moved to standalone SDKs: Opik to `github.com/agentplexus/go-opik/llmops`, Phoenix to `github.com/agentplexus/go-phoenix/llmops`", "breaking": true, "commit": "333f6fd" }
+        { "description": "Provider adapters moved to standalone SDKs: Opik to `github.com/plexusone/go-opik/llmops`, Phoenix to `github.com/plexusone/go-phoenix/llmops`", "breaking": true, "commit": "333f6fd" }
       ],
       "removed": [
         { "description": "`llmops/opik` adapter (moved to go-opik)", "commit": "333f6fd" },
@@ -94,7 +101,7 @@
         { "description": "`semconv` package with semantic conventions for agentic AI", "commit": "5fea8e0" }
       ],
       "changed": [
-        { "description": "`llmops` refactored to use `github.com/agentplexus/omnillm`", "commit": "459d2d7" }
+        { "description": "`llmops` refactored to use `github.com/plexusone/omnillm`", "commit": "459d2d7" }
       ],
       "documentation": [
         { "description": "Updated README, docs, and presentation", "commit": "dec1013" }

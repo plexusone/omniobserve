@@ -134,9 +134,9 @@ creating spans and setting attributes, use our reusable helpers:
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/agentops"
-    "github.com/agentplexus/omniobserve/agentops/middleware"
-    _ "github.com/agentplexus/omniobserve/agentops/postgres"
+    "github.com/plexusone/omniobserve/agentops"
+    "github.com/plexusone/omniobserve/agentops/middleware"
+    _ "github.com/plexusone/omniobserve/agentops/postgres"
 )
 
 // 1. Create a store (one-time setup)
@@ -228,7 +228,7 @@ For cases where you need full control, you can use the semantic conventions dire
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/semconv/agent"
+    "github.com/plexusone/omniobserve/semconv/agent"
     "go.opentelemetry.io/otel/attribute"
     "go.opentelemetry.io/otel/trace"
 )
@@ -346,7 +346,7 @@ These conventions are in **development** status. We're actively seeking:
 The semantic conventions are available as part of OmniObserve:
 
 ```go
-import "github.com/agentplexus/omniobserve/semconv/agent"
+import "github.com/plexusone/omniobserve/semconv/agent"
 ```
 
 Or use the YAML models directly for code generation in other languages.
@@ -355,7 +355,7 @@ Or use the YAML models directly for code generation in other languages.
 
 - [OpenTelemetry GenAI Semantic Conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
 - [OpenTelemetry GenAI Agent Spans](https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-agent-spans/)
-- [OmniObserve Repository](https://github.com/agentplexus/omniobserve)
+- [OmniObserve Repository](https://github.com/plexusone/omniobserve)
 
 ---
 

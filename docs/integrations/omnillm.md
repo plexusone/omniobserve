@@ -1,11 +1,11 @@
 # OmniLLM Integration
 
-OmniObserve provides an integration with [OmniLLM](https://github.com/agentplexus/omnillm), a multi-LLM abstraction layer. This allows you to automatically instrument all LLM calls made through OmniLLM with any OmniObserve provider.
+OmniObserve provides an integration with [OmniLLM](https://github.com/plexusone/omnillm), a multi-LLM abstraction layer. This allows you to automatically instrument all LLM calls made through OmniLLM with any OmniObserve provider.
 
 ## Installation
 
 ```bash
-go get github.com/agentplexus/omniobserve/integrations/omnillm
+go get github.com/plexusone/omniobserve/integrations/omnillm
 ```
 
 ## Basic Usage
@@ -14,9 +14,9 @@ go get github.com/agentplexus/omniobserve/integrations/omnillm
 package main
 
 import (
-    "github.com/agentplexus/omnillm"
-    omnillmhook "github.com/agentplexus/omniobserve/integrations/omnillm"
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omnillm"
+    omnillmhook "github.com/plexusone/omniobserve/integrations/omnillm"
+    "github.com/plexusone/omniobserve/llmops"
     _ "github.com/agentplexus/go-opik/llmops"
 )
 
@@ -118,7 +118,7 @@ for chunk := range stream {
 The integration provides context helpers for manual trace management:
 
 ```go
-import omnillmhook "github.com/agentplexus/omniobserve/integrations/omnillm"
+import omnillmhook "github.com/plexusone/omniobserve/integrations/omnillm"
 
 // Store a trace in context
 ctx = omnillmhook.ContextWithTrace(ctx, trace)

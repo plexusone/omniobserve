@@ -9,7 +9,7 @@ import (
     "context"
     "log"
 
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omniobserve/llmops"
     _ "github.com/agentplexus/go-opik/llmops"  // Register Opik provider
 )
 

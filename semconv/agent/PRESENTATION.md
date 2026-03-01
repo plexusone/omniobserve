@@ -255,8 +255,8 @@ Minimal code changes with maximum observability:
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/agentops"
-    "github.com/agentplexus/omniobserve/agentops/middleware"
+    "github.com/plexusone/omniobserve/agentops"
+    "github.com/plexusone/omniobserve/agentops/middleware"
 )
 
 // 1. Create a store
@@ -508,7 +508,7 @@ For manual instrumentation with OpenTelemetry:
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/semconv/agent"
+    "github.com/plexusone/omniobserve/semconv/agent"
     "go.opentelemetry.io/otel/attribute"
 )
 
@@ -582,7 +582,7 @@ Designed to work with:
 # Get Started
 
 ```go
-import "github.com/agentplexus/omniobserve/semconv/agent"
+import "github.com/plexusone/omniobserve/semconv/agent"
 ```
 
 Or use the YAML models for code generation in other languages.
@@ -591,7 +591,7 @@ Or use the YAML models for code generation in other languages.
 
 - [OpenTelemetry GenAI Semantic Conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
 - [OpenTelemetry GenAI Agent Spans](https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-agent-spans/)
-- [OmniObserve Repository](https://github.com/agentplexus/omniobserve)
+- [OmniObserve Repository](https://github.com/plexusone/omniobserve)
 
 ---
 

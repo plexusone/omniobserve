@@ -7,7 +7,7 @@ The slog provider logs trace events to Go's standard `log/slog` package. It's us
 The slog provider is included in OmniObserve:
 
 ```bash
-go get github.com/agentplexus/omniobserve
+go get github.com/plexusone/omniobserve
 ```
 
 ## Configuration
@@ -16,8 +16,8 @@ go get github.com/agentplexus/omniobserve
 import (
     "log/slog"
 
-    "github.com/agentplexus/omniobserve/llmops"
-    _ "github.com/agentplexus/omniobserve/llmops/slog"
+    "github.com/plexusone/omniobserve/llmops"
+    _ "github.com/plexusone/omniobserve/llmops/slog"
 )
 
 // Use default slog logger

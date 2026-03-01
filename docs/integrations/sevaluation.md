@@ -5,7 +5,7 @@ OmniObserve integrates with [structured-evaluation](https://github.com/grokify/s
 ## Installation
 
 ```bash
-go get github.com/agentplexus/omniobserve/integrations/sevaluation
+go get github.com/plexusone/omniobserve/integrations/sevaluation
 ```
 
 ## Overview
@@ -20,8 +20,8 @@ The sevaluation integration bridges:
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/integrations/sevaluation"
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omniobserve/integrations/sevaluation"
+    "github.com/plexusone/omniobserve/llmops"
 )
 
 // Initialize provider

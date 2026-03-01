@@ -22,7 +22,7 @@ A unified Go library for LLM and ML observability. OmniObserve provides a vendor
 ## Installation
 
 ```bash
-go get github.com/agentplexus/omniobserve
+go get github.com/plexusone/omniobserve
 ```
 
 ## Quick Start
@@ -34,7 +34,7 @@ import (
     "context"
     "log"
 
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omniobserve/llmops"
     _ "github.com/agentplexus/go-opik/llmops"  // Register Opik provider
 )
 
@@ -217,7 +217,7 @@ import _ "github.com/agentplexus/go-opik/llmops"
 provider, _ := llmops.Open("opik", llmops.WithAPIKey("..."))
 
 // Langfuse
-import _ "github.com/agentplexus/omniobserve/llmops/langfuse"
+import _ "github.com/plexusone/omniobserve/llmops/langfuse"
 provider, _ := llmops.Open("langfuse",
     llmops.WithAPIKey("sk-lf-..."),
     llmops.WithEndpoint("https://cloud.langfuse.com"),
@@ -366,26 +366,26 @@ if llmops.IsRateLimited(err) {
 For provider-specific features, you can use the underlying SDKs directly:
 
 ```go
-import "github.com/agentplexus/omniobserve/sdk/langfuse"  // Langfuse SDK
+import "github.com/plexusone/omniobserve/sdk/langfuse"  // Langfuse SDK
 import "github.com/agentplexus/go-opik"                   // Opik SDK
 import "github.com/agentplexus/go-phoenix"                // Phoenix SDK
 ```
 
 ## OmniLLM Integration
 
-OmniObserve provides an integration with [OmniLLM](https://github.com/agentplexus/omnillm), a multi-LLM abstraction layer. This allows you to automatically instrument all LLM calls made through OmniLLM with any OmniObserve provider.
+OmniObserve provides an integration with [OmniLLM](https://github.com/plexusone/omnillm), a multi-LLM abstraction layer. This allows you to automatically instrument all LLM calls made through OmniLLM with any OmniObserve provider.
 
 ```bash
-go get github.com/agentplexus/omniobserve/integrations/omnillm
+go get github.com/plexusone/omniobserve/integrations/omnillm
 ```
 
 ```go
 package main
 
 import (
-    "github.com/agentplexus/omnillm"
-    omnillmhook "github.com/agentplexus/omniobserve/integrations/omnillm"
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omnillm"
+    omnillmhook "github.com/plexusone/omniobserve/integrations/omnillm"
+    "github.com/plexusone/omniobserve/llmops"
     _ "github.com/agentplexus/go-opik/llmops"
 )
 
@@ -431,15 +431,15 @@ Contributions are welcome! Please feel free to submit issues and pull requests.
 
 See [LICENSE](LICENSE) for details.
 
- [build-status-svg]: https://github.com/agentplexus/omniobserve/actions/workflows/ci.yaml/badge.svg?branch=main
- [build-status-url]: https://github.com/agentplexus/omniobserve/actions/workflows/ci.yaml
- [lint-status-svg]: https://github.com/agentplexus/omniobserve/actions/workflows/lint.yaml/badge.svg?branch=main
- [lint-status-url]: https://github.com/agentplexus/omniobserve/actions/workflows/lint.yaml
- [goreport-svg]: https://goreportcard.com/badge/github.com/agentplexus/omniobserve
- [goreport-url]: https://goreportcard.com/report/github.com/agentplexus/omniobserve
- [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/agentplexus/omniobserve
- [docs-godoc-url]: https://pkg.go.dev/github.com/agentplexus/omniobserve
+ [build-status-svg]: https://github.com/plexusone/omniobserve/actions/workflows/ci.yaml/badge.svg?branch=main
+ [build-status-url]: https://github.com/plexusone/omniobserve/actions/workflows/ci.yaml
+ [lint-status-svg]: https://github.com/plexusone/omniobserve/actions/workflows/lint.yaml/badge.svg?branch=main
+ [lint-status-url]: https://github.com/plexusone/omniobserve/actions/workflows/lint.yaml
+ [goreport-svg]: https://goreportcard.com/badge/github.com/plexusone/omniobserve
+ [goreport-url]: https://goreportcard.com/report/github.com/plexusone/omniobserve
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/plexusone/omniobserve
+ [docs-godoc-url]: https://pkg.go.dev/github.com/plexusone/omniobserve
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
- [license-url]: https://github.com/agentplexus/omniobserve/blob/master/LICENSE
- [used-by-svg]: https://sourcegraph.com/github.com/agentplexus/omniobserve/-/badge.svg
- [used-by-url]: https://sourcegraph.com/github.com/agentplexus/omniobserve?badge
+ [license-url]: https://github.com/plexusone/omniobserve/blob/master/LICENSE
+ [used-by-svg]: https://sourcegraph.com/github.com/plexusone/omniobserve/-/badge.svg
+ [used-by-url]: https://sourcegraph.com/github.com/plexusone/omniobserve?badge

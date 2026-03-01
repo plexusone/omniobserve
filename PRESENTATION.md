@@ -193,7 +193,7 @@ const (
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omniobserve/llmops"
     _ "github.com/agentplexus/go-opik/llmops"  // Register provider
 )
 
@@ -335,7 +335,7 @@ import _ "github.com/agentplexus/go-opik/llmops"
 provider, _ := llmops.Open("opik", llmops.WithAPIKey("..."))
 
 // Langfuse
-import _ "github.com/agentplexus/omniobserve/llmops/langfuse"
+import _ "github.com/plexusone/omniobserve/llmops/langfuse"
 provider, _ := llmops.Open("langfuse", llmops.WithAPIKey("..."))
 
 // Phoenix
@@ -353,8 +353,8 @@ Automatically instrument LLM calls via OmniLLM:
 
 ```go
 import (
-    "github.com/agentplexus/omnillm"
-    omnillmhook "github.com/agentplexus/omniobserve/integrations/omnillm"
+    "github.com/plexusone/omnillm"
+    omnillmhook "github.com/plexusone/omniobserve/integrations/omnillm"
 )
 
 // Create hook with any OmniObserve provider
@@ -457,7 +457,7 @@ if llmops.IsNotImplemented(err) {
 ## Install
 
 ```bash
-go get github.com/agentplexus/omniobserve
+go get github.com/plexusone/omniobserve
 go get github.com/agentplexus/go-opik  # For Opik provider
 ```
 
@@ -465,15 +465,15 @@ go get github.com/agentplexus/go-opik  # For Opik provider
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omniobserve/llmops"
     _ "github.com/agentplexus/go-opik/llmops"
 )
 ```
 
 ## Documentation
 
-- GitHub: `github.com/agentplexus/omniobserve`
-- Go Docs: `pkg.go.dev/github.com/agentplexus/omniobserve`
+- GitHub: `github.com/plexusone/omniobserve`
+- Go Docs: `pkg.go.dev/github.com/plexusone/omniobserve`
 
 ---
 
@@ -497,7 +497,7 @@ import (
 
 ## Questions?
 
-GitHub: `github.com/agentplexus/omniobserve`
+GitHub: `github.com/plexusone/omniobserve`
 
 ```go
 provider, _ := llmops.Open("your-choice", ...)

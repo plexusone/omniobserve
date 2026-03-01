@@ -2,7 +2,7 @@
 
 All notable changes to OmniObserve are documented here.
 
-This changelog follows [Semantic Versioning](https://semver.org/) and is generated from [CHANGELOG.json](https://github.com/agentplexus/omniobserve/blob/main/CHANGELOG.json) using [schangelog](https://github.com/grokify/structured-changelog).
+This changelog follows [Semantic Versioning](https://semver.org/) and is generated from [CHANGELOG.json](https://github.com/plexusone/omniobserve/blob/main/CHANGELOG.json) using [schangelog](https://github.com/grokify/structured-changelog).
 
 ## [v0.6.0](v0.6.0.md) - 2026-02-22
 
@@ -26,7 +26,7 @@ This changelog follows [Semantic Versioning](https://semver.org/) and is generat
 - Observability integration guide for stats-agent-team
 - README updated with slog provider in supported providers table
 
-## [v0.5.1](https://github.com/agentplexus/omniobserve/releases/tag/v0.5.1) - 2026-01-19
+## [v0.5.1](https://github.com/plexusone/omniobserve/releases/tag/v0.5.1) - 2026-01-19
 
 ### Highlights
 
@@ -38,7 +38,7 @@ This changelog follows [Semantic Versioning](https://semver.org/) and is generat
 
 ### Dependencies
 
-- Upgraded `github.com/agentplexus/omnillm` from v0.10.0 to v0.11.0
+- Upgraded `github.com/plexusone/omnillm` from v0.10.0 to v0.11.0
 
 ## [v0.5.0](v0.5.0.md) - 2026-01-03
 
@@ -68,7 +68,7 @@ This changelog follows [Semantic Versioning](https://semver.org/) and is generat
 - `llmops/phoenix` adapter (moved to go-phoenix)
 - `sdk/phoenix` package (use go-phoenix directly)
 
-## [v0.4.0](https://github.com/agentplexus/omniobserve/releases/tag/v0.4.0) - 2025-12-27
+## [v0.4.0](https://github.com/plexusone/omniobserve/releases/tag/v0.4.0) - 2025-12-27
 
 ### Highlights
 
@@ -83,9 +83,9 @@ This changelog follows [Semantic Versioning](https://semver.org/) and is generat
 
 ### Changed
 
-- `llmops` refactored to use `github.com/agentplexus/omnillm`
+- `llmops` refactored to use `github.com/plexusone/omnillm`
 
-## [v0.3.0](https://github.com/agentplexus/omniobserve/releases/tag/v0.3.0) - 2025-12-21
+## [v0.3.0](https://github.com/plexusone/omniobserve/releases/tag/v0.3.0) - 2025-12-21
 
 ### Highlights
 
@@ -95,7 +95,7 @@ This changelog follows [Semantic Versioning](https://semver.org/) and is generat
 
 - **BREAKING**: Project renamed from `observai` to `omniobserve` for consistency with `omnillm` naming conventions
 
-## [v0.2.0](https://github.com/agentplexus/omniobserve/releases/tag/v0.2.0) - 2025-12-21
+## [v0.2.0](https://github.com/plexusone/omniobserve/releases/tag/v0.2.0) - 2025-12-21
 
 ### Highlights
 
@@ -105,7 +105,7 @@ This changelog follows [Semantic Versioning](https://semver.org/) and is generat
 
 - `integrations/fluxllm` package for FluxLLM observability
 
-## [v0.1.0](https://github.com/agentplexus/omniobserve/releases/tag/v0.1.0) - 2025-12-20
+## [v0.1.0](https://github.com/plexusone/omniobserve/releases/tag/v0.1.0) - 2025-12-20
 
 ### Highlights
 

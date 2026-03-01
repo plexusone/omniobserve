@@ -7,7 +7,7 @@ OmniObserve provides both code-based and LLM-based evaluation metrics in the `ll
 ### Exact Match
 
 ```go
-import "github.com/agentplexus/omniobserve/llmops/metrics"
+import "github.com/plexusone/omniobserve/llmops/metrics"
 
 metric := metrics.ExactMatchMetric()
 

@@ -1,8 +1,8 @@
 site_name: OmniObserve
 site_description: Unified Go library for LLM and ML observability
-site_url: https://agentplexus.github.io/omniobserve
-repo_url: https://github.com/agentplexus/omniobserve
-repo_name: agentplexus/omniobserve
+site_url: https://plexusone.github.io/omniobserve
+repo_url: https://github.com/plexusone/omniobserve
+repo_name: plexusone/omniobserve
 
 theme:
   name: material
@@ -61,7 +61,7 @@ nav:
   - Architecture: architecture.md
   - Guides:
       - Stats Agent Observability: guides/integration-guide-stats-agent-team.md
-  - API Reference: https://pkg.go.dev/github.com/agentplexus/omniobserve
+  - API Reference: https://pkg.go.dev/github.com/plexusone/omniobserve
   - Releases:
       - Changelog: releases/changelog.md
       - v0.6.0: releases/v0.6.0.md
@@ -70,4 +70,4 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/agentplexus/omniobserve
+      link: https://github.com/plexusone/omniobserve

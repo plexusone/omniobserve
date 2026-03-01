@@ -7,15 +7,15 @@
 Langfuse is included in OmniObserve:
 
 ```bash
-go get github.com/agentplexus/omniobserve
+go get github.com/plexusone/omniobserve
 ```
 
 ## Configuration
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/llmops"
-    _ "github.com/agentplexus/omniobserve/llmops/langfuse"
+    "github.com/plexusone/omniobserve/llmops"
+    _ "github.com/plexusone/omniobserve/llmops/langfuse"
 )
 
 provider, err := llmops.Open("langfuse",
@@ -52,7 +52,7 @@ provider, _ := llmops.Open("langfuse",
 For Langfuse-specific features:
 
 ```go
-import "github.com/agentplexus/omniobserve/sdk/langfuse"
+import "github.com/plexusone/omniobserve/sdk/langfuse"
 
 client := langfuse.NewClient(langfuse.Config{
     PublicKey:  "pk-lf-...",

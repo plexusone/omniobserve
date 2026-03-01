@@ -7,7 +7,7 @@
 ## Install Core Library
 
 ```bash
-go get github.com/agentplexus/omniobserve
+go get github.com/plexusone/omniobserve
 ```
 
 ## Install Provider Adapters
@@ -33,5 +33,5 @@ go get github.com/agentplexus/go-phoenix
 To auto-instrument OmniLLM calls:
 
 ```bash
-go get github.com/agentplexus/omniobserve/integrations/omnillm
+go get github.com/plexusone/omniobserve/integrations/omnillm
 ```

@@ -174,7 +174,7 @@ if llmops.IsRateLimited(err) {
 For provider-specific features, use the underlying SDKs directly:
 
 ```go
-import "github.com/agentplexus/omniobserve/sdk/langfuse"  // Langfuse SDK
+import "github.com/plexusone/omniobserve/sdk/langfuse"  // Langfuse SDK
 import "github.com/agentplexus/go-opik"                   // Opik SDK
 import "github.com/agentplexus/go-phoenix"                // Phoenix SDK
 ```

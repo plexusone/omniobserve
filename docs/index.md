@@ -2,9 +2,9 @@
 
 **Unified Go library for LLM and ML observability**
 
-[![Build Status](https://github.com/agentplexus/omniobserve/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/agentplexus/omniobserve/actions/workflows/ci.yaml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/agentplexus/omniobserve)](https://goreportcard.com/report/github.com/agentplexus/omniobserve)
-[![Go Reference](https://pkg.go.dev/badge/github.com/agentplexus/omniobserve.svg)](https://pkg.go.dev/github.com/agentplexus/omniobserve)
+[![Build Status](https://github.com/plexusone/omniobserve/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/plexusone/omniobserve/actions/workflows/ci.yaml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/plexusone/omniobserve)](https://goreportcard.com/report/github.com/plexusone/omniobserve)
+[![Go Reference](https://pkg.go.dev/badge/github.com/plexusone/omniobserve.svg)](https://pkg.go.dev/github.com/plexusone/omniobserve)
 
 OmniObserve provides a vendor-agnostic abstraction layer that enables you to instrument your AI applications once and seamlessly switch between different observability backends without code changes.
 
@@ -28,7 +28,7 @@ import (
     "context"
     "log"
 
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omniobserve/llmops"
     _ "github.com/agentplexus/go-opik/llmops"  // Register Opik provider
 )
 

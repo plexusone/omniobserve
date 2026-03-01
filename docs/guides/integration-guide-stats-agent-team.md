@@ -248,8 +248,8 @@ If production monitoring with alerting is required:
 package observability
 
 import (
-    "github.com/agentplexus/omniobserve/llmops"
-    "github.com/agentplexus/omniobserve/observops"
+    "github.com/plexusone/omniobserve/llmops"
+    "github.com/plexusone/omniobserve/observops"
 )
 
 type DualObserver struct {
@@ -369,6 +369,6 @@ For stats-agent-team today, **start with Opik native SDK** and add complexity on
 
 - [observability-profiles](https://github.com/agentplexus/observability-profiles) - OTel-based semantic convention profiles
 - [semconv-compose](https://github.com/agentplexus/semconv-compose) - Profile composition and validation tool
-- [omniobserve](https://github.com/agentplexus/omniobserve) - Multi-backend observability library
+- [omniobserve](https://github.com/plexusone/omniobserve) - Multi-backend observability library
 - [Comet Opik Documentation](https://www.comet.com/docs/opik/)
 - [New Relic OpenTelemetry](https://docs.newrelic.com/docs/opentelemetry/get-started/opentelemetry-get-started-intro/)

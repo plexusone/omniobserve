@@ -12,7 +12,7 @@ go get github.com/agentplexus/go-phoenix
 
 ```go
 import (
-    "github.com/agentplexus/omniobserve/llmops"
+    "github.com/plexusone/omniobserve/llmops"
     _ "github.com/agentplexus/go-phoenix/llmops"
 )
 
