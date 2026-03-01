@@ -131,7 +131,7 @@
 //
 // # Integration with OpenTelemetry
 //
-// The middleware uses semantic conventions from github.com/agentplexus/omniobserve/semconv/agent,
+// The middleware uses semantic conventions from github.com/plexusone/omniobserve/semconv/agent,
 // which align with OpenTelemetry's gen_ai.agent.* namespace. This enables integration with
 // OpenTelemetry-compatible observability platforms.
 package middleware

@@ -18,9 +18,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/agentplexus/omnillm"
-	"github.com/agentplexus/omniobserve/llmops"
-	"github.com/agentplexus/omniobserve/llmops/metrics"
+	"github.com/plexusone/omnillm"
+	"github.com/plexusone/omniobserve/llmops"
+	"github.com/plexusone/omniobserve/llmops/metrics"
 )
 
 func main() {

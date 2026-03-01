@@ -11,12 +11,12 @@ import (
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
-	"github.com/agentplexus/omniobserve/agentops/ent/agentevent"
-	"github.com/agentplexus/omniobserve/agentops/ent/agenthandoff"
-	"github.com/agentplexus/omniobserve/agentops/ent/agenttask"
-	"github.com/agentplexus/omniobserve/agentops/ent/predicate"
-	"github.com/agentplexus/omniobserve/agentops/ent/toolinvocation"
-	"github.com/agentplexus/omniobserve/agentops/ent/workflow"
+	"github.com/plexusone/omniobserve/agentops/ent/agentevent"
+	"github.com/plexusone/omniobserve/agentops/ent/agenthandoff"
+	"github.com/plexusone/omniobserve/agentops/ent/agenttask"
+	"github.com/plexusone/omniobserve/agentops/ent/predicate"
+	"github.com/plexusone/omniobserve/agentops/ent/toolinvocation"
+	"github.com/plexusone/omniobserve/agentops/ent/workflow"
 )
 
 const (

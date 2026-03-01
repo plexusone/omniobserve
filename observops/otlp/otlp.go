@@ -5,8 +5,8 @@
 // # Usage
 //
 //	import (
-//		"github.com/agentplexus/omniobserve/observops"
-//		_ "github.com/agentplexus/omniobserve/observops/otlp"
+//		"github.com/plexusone/omniobserve/observops"
+//		_ "github.com/plexusone/omniobserve/observops/otlp"
 //	)
 //
 //	provider, err := observops.Open("otlp",
@@ -34,7 +34,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agentplexus/omniobserve/observops"
+	"github.com/plexusone/omniobserve/observops"
 
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"

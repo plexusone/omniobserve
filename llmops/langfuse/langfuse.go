@@ -2,7 +2,7 @@
 //
 // Import this package to register the Langfuse provider:
 //
-//	import _ "github.com/agentplexus/omniobserve/llmops/langfuse"
+//	import _ "github.com/plexusone/omniobserve/llmops/langfuse"
 //
 // Then open it:
 //
@@ -16,8 +16,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/agentplexus/omniobserve/llmops"
-	sdk "github.com/agentplexus/omniobserve/sdk/langfuse"
+	"github.com/plexusone/omniobserve/llmops"
+	sdk "github.com/plexusone/omniobserve/sdk/langfuse"
 )
 
 const ProviderName = "langfuse"

@@ -47,7 +47,7 @@ func Providers() []string {
 //
 // Most users will use a specific provider package import like:
 //
-//	import _ "github.com/agentplexus/omniobserve/agentops/postgres"
+//	import _ "github.com/plexusone/omniobserve/agentops/postgres"
 //
 // And then open it with:
 //

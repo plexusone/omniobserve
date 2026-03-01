@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/agentplexus/omniobserve/agentops/ent/agenthandoff"
-	"github.com/agentplexus/omniobserve/agentops/ent/predicate"
+	"github.com/plexusone/omniobserve/agentops/ent/agenthandoff"
+	"github.com/plexusone/omniobserve/agentops/ent/predicate"
 )
 
 // AgentHandoffDelete is the builder for deleting a AgentHandoff entity.

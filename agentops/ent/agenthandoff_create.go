@@ -10,8 +10,8 @@ import (
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/agentplexus/omniobserve/agentops/ent/agenthandoff"
-	"github.com/agentplexus/omniobserve/agentops/ent/workflow"
+	"github.com/plexusone/omniobserve/agentops/ent/agenthandoff"
+	"github.com/plexusone/omniobserve/agentops/ent/workflow"
 )
 
 // AgentHandoffCreate is the builder for creating a AgentHandoff entity.

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/agentplexus/omniobserve/agentops"
+	"github.com/plexusone/omniobserve/agentops"
 )
 
 // AgentHandlerConfig configures the agent HTTP handler middleware.

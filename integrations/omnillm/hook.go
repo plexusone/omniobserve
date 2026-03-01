@@ -5,10 +5,10 @@ package omnillm
 import (
 	"context"
 
-	"github.com/agentplexus/omnillm"
-	"github.com/agentplexus/omnillm/provider"
+	"github.com/plexusone/omnillm"
+	"github.com/plexusone/omnillm/provider"
 
-	"github.com/agentplexus/omniobserve/llmops"
+	"github.com/plexusone/omniobserve/llmops"
 )
 
 // Hook implements omnillm.ObservabilityHook using an llmops.Provider.

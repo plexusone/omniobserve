@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/agentplexus/omnillm"
-	"github.com/agentplexus/omniobserve/llmops"
+	"github.com/plexusone/omnillm"
+	"github.com/plexusone/omniobserve/llmops"
 )
 
 // =============================================================================

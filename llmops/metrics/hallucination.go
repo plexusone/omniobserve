@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/agentplexus/omniobserve/llmops"
+	"github.com/plexusone/omniobserve/llmops"
 )
 
 // HallucinationMetric is an LLM-based metric that detects hallucinations.

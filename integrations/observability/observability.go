@@ -41,7 +41,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/agentplexus/omniobserve/observops"
+	"github.com/plexusone/omniobserve/observops"
 )
 
 // HTTPMiddleware returns a middleware that instruments HTTP handlers with tracing.

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/agentplexus/omniobserve/agentops"
+	"github.com/plexusone/omniobserve/agentops"
 )
 
 // ToolCallConfig configures a tool call invocation.

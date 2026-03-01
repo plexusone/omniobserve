@@ -47,7 +47,7 @@ func Providers() []string {
 //
 // Most users will use a specific provider package import like:
 //
-//	import _ "github.com/agentplexus/omniobserve/observops/otlp"
+//	import _ "github.com/plexusone/omniobserve/observops/otlp"
 //
 // And then open it with:
 //

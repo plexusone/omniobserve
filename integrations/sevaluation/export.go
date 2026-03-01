@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/agentplexus/omniobserve/llmops"
-	"github.com/agentplexus/structured-evaluation/evaluation"
+	"github.com/plexusone/omniobserve/llmops"
+	"github.com/plexusone/structured-evaluation/evaluation"
 )
 
 // ExportOptions configures the export behavior.

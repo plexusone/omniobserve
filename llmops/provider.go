@@ -47,7 +47,7 @@ func Providers() []string {
 //
 // Most users will use a specific provider package import like:
 //
-//	import _ "github.com/agentplexus/omniobserve/llmops/opik"
+//	import _ "github.com/plexusone/omniobserve/llmops/opik"
 //
 // And then open it with:
 //

@@ -3,7 +3,7 @@ package omnillm
 import (
 	"context"
 
-	"github.com/agentplexus/omniobserve/llmops"
+	"github.com/plexusone/omniobserve/llmops"
 )
 
 // contextKey is a private type used for storing spans in context.

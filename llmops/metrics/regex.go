@@ -3,7 +3,7 @@ package metrics
 import (
 	"regexp"
 
-	"github.com/agentplexus/omniobserve/llmops"
+	"github.com/plexusone/omniobserve/llmops"
 )
 
 // RegexMetric is a code-based metric that checks if output matches a regex pattern.

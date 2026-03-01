@@ -3,7 +3,7 @@ package middleware
 import (
 	"context"
 
-	"github.com/agentplexus/omniobserve/agentops"
+	"github.com/plexusone/omniobserve/agentops"
 )
 
 // Context keys for propagating observability data through request context.

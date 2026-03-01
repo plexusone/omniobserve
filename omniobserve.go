@@ -13,10 +13,10 @@
 // Import the provider you want to use:
 //
 //	import (
-//		"github.com/agentplexus/omniobserve/llmops"
+//		"github.com/plexusone/omniobserve/llmops"
 //		_ "github.com/agentplexus/go-opik/llmops"             // Register Opik
 //		// or
-//		_ "github.com/agentplexus/omniobserve/llmops/langfuse" // Register Langfuse
+//		_ "github.com/plexusone/omniobserve/llmops/langfuse" // Register Langfuse
 //		// or
 //		_ "github.com/agentplexus/go-phoenix/llmops"           // Register Phoenix
 //	)
@@ -45,12 +45,12 @@
 // Import the provider you want to use:
 //
 //	import (
-//		"github.com/agentplexus/omniobserve/observops"
-//		_ "github.com/agentplexus/omniobserve/observops/otlp"     // OTLP exporter
+//		"github.com/plexusone/omniobserve/observops"
+//		_ "github.com/plexusone/omniobserve/observops/otlp"     // OTLP exporter
 //		// or
-//		_ "github.com/agentplexus/omniobserve/observops/newrelic" // New Relic
+//		_ "github.com/plexusone/omniobserve/observops/newrelic" // New Relic
 //		// or
-//		_ "github.com/agentplexus/omniobserve/observops/datadog"  // Datadog
+//		_ "github.com/plexusone/omniobserve/observops/datadog"  // Datadog
 //	)
 //
 // Then open a provider:
@@ -122,13 +122,13 @@
 //
 //	import "github.com/agentplexus/go-opik"    // Opik SDK
 //	import "github.com/agentplexus/go-phoenix" // Phoenix SDK
-//	import "github.com/agentplexus/omniobserve/sdk/langfuse"
+//	import "github.com/plexusone/omniobserve/sdk/langfuse"
 package omniobserve
 
 import (
-	"github.com/agentplexus/omniobserve/llmops"
-	"github.com/agentplexus/omniobserve/mlops"
-	"github.com/agentplexus/omniobserve/observops"
+	"github.com/plexusone/omniobserve/llmops"
+	"github.com/plexusone/omniobserve/mlops"
+	"github.com/plexusone/omniobserve/observops"
 )
 
 // Version is the library version.

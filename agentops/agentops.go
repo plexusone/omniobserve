@@ -19,8 +19,8 @@
 // # Quick Start
 //
 //	import (
-//		"github.com/agentplexus/omniobserve/agentops"
-//		_ "github.com/agentplexus/omniobserve/agentops/postgres"
+//		"github.com/plexusone/omniobserve/agentops"
+//		_ "github.com/plexusone/omniobserve/agentops/postgres"
 //	)
 //
 //	store, err := agentops.Open("postgres",

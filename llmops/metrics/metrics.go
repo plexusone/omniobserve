@@ -14,8 +14,8 @@
 // # Usage
 //
 //	import (
-//	    "github.com/agentplexus/omniobserve/llmops/metrics"
-//	    "github.com/agentplexus/omnillm"
+//	    "github.com/plexusone/omniobserve/llmops/metrics"
+//	    "github.com/plexusone/omnillm"
 //	)
 //
 //	// Create LLM client for LLM-based metrics
@@ -42,8 +42,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/agentplexus/omnillm"
-	"github.com/agentplexus/omnillm/provider"
+	"github.com/plexusone/omnillm"
+	"github.com/plexusone/omnillm/provider"
 )
 
 // LLM wraps an omnillm.ChatClient for use with LLM-based metrics.

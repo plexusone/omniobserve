@@ -3,7 +3,7 @@ package otlp
 import (
 	"context"
 
-	"github.com/agentplexus/omniobserve/observops"
+	"github.com/plexusone/omniobserve/observops"
 )
 
 // noopProvider is a provider that does nothing.

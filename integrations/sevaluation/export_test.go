@@ -3,8 +3,8 @@ package sevaluation
 import (
 	"testing"
 
-	"github.com/agentplexus/omniobserve/llmops"
-	"github.com/agentplexus/structured-evaluation/evaluation"
+	"github.com/plexusone/omniobserve/llmops"
+	"github.com/plexusone/structured-evaluation/evaluation"
 )
 
 func TestNormalizeScore(t *testing.T) {

@@ -5,12 +5,12 @@ package enttest
 import (
 	"context"
 
-	"github.com/agentplexus/omniobserve/agentops/ent"
+	"github.com/plexusone/omniobserve/agentops/ent"
 	// required by schema hooks.
-	_ "github.com/agentplexus/omniobserve/agentops/ent/runtime"
+	_ "github.com/plexusone/omniobserve/agentops/ent/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
-	"github.com/agentplexus/omniobserve/agentops/ent/migrate"
+	"github.com/plexusone/omniobserve/agentops/ent/migrate"
 )
 
 type (

@@ -1,7 +1,7 @@
 package metrics
 
 import (
-	"github.com/agentplexus/omniobserve/llmops"
+	"github.com/plexusone/omniobserve/llmops"
 )
 
 // ExactMatchMetric is a code-based metric that checks for exact string match.

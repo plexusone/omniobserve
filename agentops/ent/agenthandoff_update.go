@@ -11,9 +11,9 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/agentplexus/omniobserve/agentops/ent/agenthandoff"
-	"github.com/agentplexus/omniobserve/agentops/ent/predicate"
-	"github.com/agentplexus/omniobserve/agentops/ent/workflow"
+	"github.com/plexusone/omniobserve/agentops/ent/agenthandoff"
+	"github.com/plexusone/omniobserve/agentops/ent/predicate"
+	"github.com/plexusone/omniobserve/agentops/ent/workflow"
 )
 
 // AgentHandoffUpdate is the builder for updating AgentHandoff entities.

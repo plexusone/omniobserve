@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/agentplexus/omniobserve/agentops/ent/agentevent"
-	"github.com/agentplexus/omniobserve/agentops/ent/predicate"
+	"github.com/plexusone/omniobserve/agentops/ent/agentevent"
+	"github.com/plexusone/omniobserve/agentops/ent/predicate"
 )
 
 // AgentEventDelete is the builder for deleting a AgentEvent entity.

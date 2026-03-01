@@ -38,5 +38,5 @@
 //
 //   - OpenTelemetry GenAI Conventions: https://opentelemetry.io/docs/specs/semconv/gen-ai/
 //   - OpenTelemetry GenAI Agent Spans: https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-agent-spans/
-//   - OmniObserve: https://github.com/agentplexus/omniobserve
+//   - OmniObserve: https://github.com/plexusone/omniobserve
 package agent

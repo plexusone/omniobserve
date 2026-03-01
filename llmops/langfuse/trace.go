@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/agentplexus/omniobserve/llmops"
-	sdk "github.com/agentplexus/omniobserve/sdk/langfuse"
+	"github.com/plexusone/omniobserve/llmops"
+	sdk "github.com/plexusone/omniobserve/sdk/langfuse"
 )
 
 // spanCreator is an interface for types that can create child spans and generations.

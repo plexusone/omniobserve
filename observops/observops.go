@@ -20,12 +20,12 @@
 // Import the provider you want to use:
 //
 //	import (
-//		"github.com/agentplexus/omniobserve/observops"
-//		_ "github.com/agentplexus/omniobserve/observops/otlp"     // OTLP exporter
+//		"github.com/plexusone/omniobserve/observops"
+//		_ "github.com/plexusone/omniobserve/observops/otlp"     // OTLP exporter
 //		// or
-//		_ "github.com/agentplexus/omniobserve/observops/newrelic" // New Relic
+//		_ "github.com/plexusone/omniobserve/observops/newrelic" // New Relic
 //		// or
-//		_ "github.com/agentplexus/omniobserve/observops/datadog"  // Datadog
+//		_ "github.com/plexusone/omniobserve/observops/datadog"  // Datadog
 //	)
 //
 // Then open a provider:

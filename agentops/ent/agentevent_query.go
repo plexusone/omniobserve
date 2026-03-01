@@ -11,10 +11,10 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/agentplexus/omniobserve/agentops/ent/agentevent"
-	"github.com/agentplexus/omniobserve/agentops/ent/agenttask"
-	"github.com/agentplexus/omniobserve/agentops/ent/predicate"
-	"github.com/agentplexus/omniobserve/agentops/ent/workflow"
+	"github.com/plexusone/omniobserve/agentops/ent/agentevent"
+	"github.com/plexusone/omniobserve/agentops/ent/agenttask"
+	"github.com/plexusone/omniobserve/agentops/ent/predicate"
+	"github.com/plexusone/omniobserve/agentops/ent/workflow"
 )
 
 // AgentEventQuery is the builder for querying AgentEvent entities.

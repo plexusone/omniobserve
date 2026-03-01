@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/agentplexus/omniobserve/agentops/ent"
+	"github.com/plexusone/omniobserve/agentops/ent"
 )
 
 // The AgentEventFunc type is an adapter to allow the use of ordinary

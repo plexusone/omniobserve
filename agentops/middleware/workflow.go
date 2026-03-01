@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/agentplexus/omniobserve/agentops"
+	"github.com/plexusone/omniobserve/agentops"
 )
 
 // WorkflowConfig configures workflow creation.

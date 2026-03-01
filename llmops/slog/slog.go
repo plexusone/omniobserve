@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agentplexus/omniobserve/llmops"
+	"github.com/plexusone/omniobserve/llmops"
 	"github.com/google/uuid"
 )
 
