@@ -7,15 +7,28 @@
   "maintainers": ["plexusone"],
   "releases": [
     {
-      "version": "v0.6.0",
+      "version": "v0.7.0",
       "date": "2026-03-01",
       "highlights": [
-        { "description": "Organization rename from agentplexus to plexusone" },
-        { "description": "Built-in slog provider for local trace logging during development and debugging" },
-        { "description": "Structured evaluation integration for connecting llmops with sevaluation workflows" }
+        { "description": "Organization rename from agentplexus to plexusone" }
       ],
       "changed": [
         { "description": "**Breaking**: Module path changed from `github.com/agentplexus/omniobserve` to `github.com/plexusone/omniobserve`" }
+      ],
+      "documentation": [
+        { "description": "Updated all documentation to use new module path" }
+      ],
+      "dependencies": [
+        { "description": "Upgraded `github.com/plexusone/omnillm` from v0.11.1 to v0.13.0" },
+        { "description": "Upgraded `github.com/plexusone/structured-evaluation` from v0.2.0 to v0.3.0" }
+      ]
+    },
+    {
+      "version": "v0.6.0",
+      "date": "2026-02-22",
+      "highlights": [
+        { "description": "Built-in slog provider for local trace logging during development and debugging" },
+        { "description": "Structured evaluation integration for connecting llmops with sevaluation workflows" }
       ],
       "added": [
         { "description": "`llmops/slog` provider for local structured logging of trace events", "commit": "9b7dc4e" },
@@ -27,13 +40,10 @@
       ],
       "documentation": [
         { "description": "Observability integration guide for stats-agent-team", "commit": "4cdffaa" },
-        { "description": "README updated with slog provider in supported providers table", "commit": "" },
-        { "description": "Updated all documentation to use new module path" }
+        { "description": "README updated with slog provider in supported providers table", "commit": "" }
       ],
       "dependencies": [
-        { "description": "Upgraded `github.com/lib/pq` from v1.10.9 to v1.11.1", "commit": "3a1ccde" },
-        { "description": "Upgraded `github.com/plexusone/omnillm` from v0.11.1 to v0.13.0" },
-        { "description": "Upgraded `github.com/plexusone/structured-evaluation` from v0.2.0 to v0.3.0" }
+        { "description": "Upgraded `github.com/lib/pq` from v1.10.9 to v1.11.1", "commit": "3a1ccde" }
       ]
     },
     {
