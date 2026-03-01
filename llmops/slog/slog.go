@@ -9,8 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/plexusone/omniobserve/llmops"
 	"github.com/google/uuid"
+
+	"github.com/plexusone/omniobserve/llmops"
 )
 
 func init() {
