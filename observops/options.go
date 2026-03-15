@@ -294,3 +294,94 @@ func GetEventTimestamp(opts ...EventOption) *time.Time {
 	cfg := ApplyEventOptions(opts...)
 	return cfg.timestamp
 }
+
+// SlogOption configures slog.Handler integration.
+type SlogOption func(*SlogConfig)
+
+// SlogConfig holds configuration for slog.Handler integration.
+type SlogConfig struct {
+	// LocalHandler is the handler for local output (console, file).
+	// If nil, logs are only sent to the observability backend.
+	LocalHandler interface{} // slog.Handler, using interface{} to avoid import cycle
+
+	// RemoteLevel is the minimum level for remote export.
+	// Defaults to slog.LevelInfo.
+	RemoteLevel int // slog.Level value
+
+	// IncludeTraceContext enables automatic trace_id/span_id injection.
+	// Defaults to true.
+	IncludeTraceContext bool
+
+	// TraceIDKey is the attribute key for trace ID.
+	// Defaults to "trace_id".
+	TraceIDKey string
+
+	// SpanIDKey is the attribute key for span ID.
+	// Defaults to "span_id".
+	SpanIDKey string
+
+	// Disabled disables the handler (returns a noop handler).
+	Disabled bool
+}
+
+// DefaultSlogConfig returns a SlogConfig with sensible defaults.
+func DefaultSlogConfig() *SlogConfig {
+	return &SlogConfig{
+		RemoteLevel:         0, // slog.LevelInfo
+		IncludeTraceContext: true,
+		TraceIDKey:          "trace_id",
+		SpanIDKey:           "span_id",
+	}
+}
+
+// ApplySlogOptions applies slog options to a config.
+func ApplySlogOptions(opts ...SlogOption) *SlogConfig {
+	cfg := DefaultSlogConfig()
+	for _, opt := range opts {
+		opt(cfg)
+	}
+	return cfg
+}
+
+// WithSlogLocalHandler sets the local output handler.
+func WithSlogLocalHandler(h interface{}) SlogOption {
+	return func(c *SlogConfig) {
+		c.LocalHandler = h
+	}
+}
+
+// WithSlogRemoteLevel sets the minimum level for remote export.
+// Use slog.LevelDebug, slog.LevelInfo, slog.LevelWarn, slog.LevelError.
+func WithSlogRemoteLevel(level int) SlogOption {
+	return func(c *SlogConfig) {
+		c.RemoteLevel = level
+	}
+}
+
+// WithSlogDisableTraceContext disables automatic trace context injection.
+func WithSlogDisableTraceContext() SlogOption {
+	return func(c *SlogConfig) {
+		c.IncludeTraceContext = false
+	}
+}
+
+// WithSlogTraceIDKey sets the attribute key for trace ID.
+func WithSlogTraceIDKey(key string) SlogOption {
+	return func(c *SlogConfig) {
+		c.TraceIDKey = key
+	}
+}
+
+// WithSlogSpanIDKey sets the attribute key for span ID.
+func WithSlogSpanIDKey(key string) SlogOption {
+	return func(c *SlogConfig) {
+		c.SpanIDKey = key
+	}
+}
+
+// WithSlogDisabled disables the slog handler.
+func WithSlogDisabled() SlogOption {
+	return func(c *SlogConfig) {
+		c.Disabled = true
+	}
+}

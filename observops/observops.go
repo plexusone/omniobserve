@@ -65,6 +65,7 @@ package observops
 
 import (
 	"context"
+	"log/slog"
 	"time"
 )
 
@@ -82,6 +83,11 @@ type Provider interface {
 
 	// Logger returns a structured logger.
 	Logger() Logger
+
+	// SlogHandler returns an slog.Handler that integrates with this provider.
+	// The handler automatically correlates logs with active traces.
+	// Options can be used to configure local output and filtering.
+	SlogHandler(opts ...SlogOption) slog.Handler
 
 	// Shutdown gracefully shuts down the provider, flushing any buffered data.
 	Shutdown(ctx context.Context) error
