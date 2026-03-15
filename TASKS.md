@@ -33,11 +33,11 @@ Reference: [TRD](docs/design/TRD_UNIFIED_SLOG_OBSERVABILITY.md) | [Plan](docs/de
   - [x] `docs/providers/sloghandler.md`
 
 ### Phase 4: Unified Entry Point
-- [ ] Create `omniobserve/unified.go`
-- [ ] Create `omniobserve/options.go`
-- [ ] Context utilities (ContextWithLogger, LoggerFromContext)
-- [ ] HTTP middleware (Chi/Echo/Gin adapters)
-- [ ] Example applications
+- [x] Create `omniobserve/unified.go`
+- [x] Create `omniobserve/options.go`
+- [x] Context utilities (ContextWithLogger, LoggerFromContext)
+- [x] HTTP middleware (standard http.Handler)
+- [x] Example applications
 
 ### Phase 5: llmops + observops Correlation
 - [ ] Context bridge between llmops and observops
@@ -48,11 +48,10 @@ Reference: [TRD](docs/design/TRD_UNIFIED_SLOG_OBSERVABILITY.md) | [Plan](docs/de
 
 ## Status
 
-**Phases 1-3 Complete** - Core slog + observability integration is ready for use.
+**Phases 1-4 Complete** - Unified observability with HTTP middleware is ready for use.
 
-Remaining phases (4-5) are optional enhancements that can be done later:
+Remaining phase (5) is an optional enhancement:
 
-- Phase 4: Convenience APIs and middleware
 - Phase 5: LLM-specific correlation (only needed for LLM applications)
 
 ---
@@ -63,6 +62,5 @@ The following are not blocking and can be done as needed:
 
 - [ ] Integration tests with OTLP collector (Phase 2)
 - [ ] Prometheus provider - metrics-only (Phase 3)
-- [ ] Unified entry point API (Phase 4)
-- [ ] HTTP middleware adapters (Phase 4)
+- [ ] Chi/Echo/Gin-specific middleware adapters (Phase 4 enhancement)
 - [ ] llmops + observops correlation (Phase 5)
