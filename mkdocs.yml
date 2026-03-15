@@ -1,5 +1,5 @@
 site_name: OmniObserve
-site_description: Unified Go library for LLM and ML observability
+site_description: Unified Go library for observability - LLM tracing and app metrics/traces/logs
 site_url: https://plexusone.github.io/omniobserve
 repo_url: https://github.com/plexusone/omniobserve
 repo_name: plexusone/omniobserve
@@ -44,12 +44,18 @@ nav:
       - Installation: getting-started/installation.md
       - Quick Start: getting-started/quickstart.md
       - Configuration: getting-started/configuration.md
-  - Providers:
+  - LLM Providers:
       - Overview: providers/index.md
       - Opik: providers/opik.md
       - Langfuse: providers/langfuse.md
       - Phoenix: providers/phoenix.md
       - slog: providers/slog.md
+  - App Observability (observops):
+      - OTLP: providers/otlp.md
+      - Datadog: providers/datadog.md
+      - New Relic: providers/newrelic.md
+      - Dynatrace: providers/dynatrace.md
+      - sloghandler: providers/sloghandler.md
   - Features:
       - Tracing: features/tracing.md
       - Evaluation Metrics: features/metrics.md

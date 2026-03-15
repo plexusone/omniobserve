@@ -1,8 +1,15 @@
 # Providers
 
-OmniObserve supports multiple observability backends through a unified interface. Each provider is registered via blank import and opened with `llmops.Open()`.
+OmniObserve provides two provider systems:
 
-## Supported Providers
+- **llmops** - LLM observability for AI/ML applications (tracing, evaluation, prompts, datasets)
+- **observops** - General application observability (metrics, traces, logs)
+
+---
+
+## LLM Providers (llmops)
+
+For AI/ML application observability. Register via blank import and open with `llmops.Open()`.
 
 | Provider | Package | Description |
 |----------|---------|-------------|
@@ -11,7 +18,35 @@ OmniObserve supports multiple observability backends through a unified interface
 | [Phoenix](phoenix.md) | `github.com/agentplexus/go-phoenix/llmops` | Arize Phoenix - OpenTelemetry-based |
 | [slog](slog.md) | `omniobserve/llmops/slog` | Local structured logging for development |
 
-## Provider Capabilities
+---
+
+## App Observability Providers (observops)
+
+For general application observability. Register via blank import and open with `observops.Open()`.
+
+| Provider | Package | Description |
+|----------|---------|-------------|
+| [OTLP](otlp.md) | `omniobserve/observops/otlp` | OpenTelemetry Protocol - vendor-agnostic |
+| [Datadog](datadog.md) | `omniobserve/observops/datadog` | Datadog APM via OTLP |
+| [New Relic](newrelic.md) | `omniobserve/observops/newrelic` | New Relic via OTLP |
+| [Dynatrace](dynatrace.md) | `omniobserve/observops/dynatrace` | Dynatrace via OTLP |
+
+See also: [sloghandler](sloghandler.md) for slog integration with trace correlation.
+
+---
+
+## observops Capabilities
+
+| Feature | OTLP | Datadog | New Relic | Dynatrace |
+|---------|:----:|:-------:|:---------:|:---------:|
+| Metrics | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Traces | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Logs | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| slog Handler | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+---
+
+## LLM Provider Capabilities
 
 | Feature | Opik | Langfuse | Phoenix | slog |
 |---------|:----:|:--------:|:-------:|:----:|
@@ -27,7 +62,7 @@ OmniObserve supports multiple observability backends through a unified interface
 
 ## Provider Registration
 
-Providers are registered via blank imports:
+### LLM Providers (llmops)
 
 ```go
 import (
@@ -42,6 +77,28 @@ import (
 
 // Open by name
 provider, err := llmops.Open("opik", llmops.WithAPIKey("..."))
+```
+
+### App Observability Providers (observops)
+
+```go
+import (
+    "github.com/plexusone/omniobserve/observops"
+
+    // Register one provider
+    _ "github.com/plexusone/omniobserve/observops/otlp"     // OTLP
+    // or
+    _ "github.com/plexusone/omniobserve/observops/datadog"  // Datadog
+    // or
+    _ "github.com/plexusone/omniobserve/observops/newrelic" // New Relic
+)
+
+// Open by name
+provider, err := observops.Open("otlp",
+    observops.WithEndpoint("localhost:4317"),
+    observops.WithServiceName("my-service"),
+)
+defer provider.Shutdown(ctx)
 ```
 
 ## Direct SDK Access

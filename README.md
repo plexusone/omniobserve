@@ -1,14 +1,42 @@
 # OmniObserve
 
-[![Build Status][build-status-svg]][build-status-url]
-[![Lint Status][lint-status-svg]][lint-status-url]
+[![Go CI][go-ci-svg]][go-ci-url]
+[![Go Lint][go-lint-svg]][go-lint-url]
+[![Go SAST][go-sast-svg]][go-sast-url]
 [![Go Report Card][goreport-svg]][goreport-url]
 [![Docs][docs-godoc-svg]][docs-godoc-url]
+[![Visualization][viz-svg]][viz-url]
 [![License][license-svg]][license-url]
 
-A unified Go library for LLM and ML observability. OmniObserve provides a vendor-agnostic abstraction layer that enables you to instrument your AI applications once and seamlessly switch between different observability backends without code changes.
+ [go-ci-svg]: https://github.com/plexusone/omniobserve/actions/workflows/go-ci.yaml/badge.svg?branch=main
+ [go-ci-url]: https://github.com/plexusone/omniobserve/actions/workflows/go-ci.yaml
+ [go-lint-svg]: https://github.com/plexusone/omniobserve/actions/workflows/go-lint.yaml/badge.svg?branch=main
+ [go-lint-url]: https://github.com/plexusone/omniobserve/actions/workflows/go-lint.yaml
+ [go-sast-svg]: https://github.com/plexusone/omniobserve/actions/workflows/go-sast-codeql.yaml/badge.svg?branch=main
+ [go-sast-url]: https://github.com/plexusone/omniobserve/actions/workflows/go-sast-codeql.yaml
+ [goreport-svg]: https://goreportcard.com/badge/github.com/plexusone/omniobserve
+ [goreport-url]: https://goreportcard.com/report/github.com/plexusone/omniobserve
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/plexusone/omniobserve
+ [docs-godoc-url]: https://pkg.go.dev/github.com/plexusone/omniobserve
+ [viz-svg]: https://img.shields.io/badge/visualizaton-Go-blue.svg
+ [viz-url]: https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo=plexusone%2Fomniobserve
+ [loc-svg]: https://tokei.rs/b1/github/plexusone/omniobserve
+ [repo-url]: https://github.com/plexusone/omniobserve
+ [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
+ [license-url]: https://github.com/plexusone/omniobserve/blob/master/LICENSE
+
+A unified Go library for observability. OmniObserve provides vendor-agnostic abstraction layers that enable you to instrument your applications once and seamlessly switch between different observability backends without code changes.
+
+## Two Provider Systems
+
+| Package | Purpose | Providers |
+|---------|---------|-----------|
+| **llmops** | LLM/ML observability | Opik, Langfuse, Phoenix, slog |
+| **observops** | App observability (metrics, traces, logs) | OTLP, Datadog, New Relic, Dynatrace |
 
 ## Features
+
+### LLM Observability (llmops)
 
 - 🔗 **Unified Interface**: Single API for tracing, evaluation, prompts, and datasets across all providers
 - 🔄 **Provider Agnostic**: Switch between Opik, Langfuse, and Phoenix without changing your code
@@ -16,6 +44,16 @@ A unified Go library for LLM and ML observability. OmniObserve provides a vendor
 - 📊 **Evaluation Support**: Run metrics and add feedback scores to traces
 - 📦 **Dataset Management**: Create and manage evaluation datasets
 - 📝 **Prompt Versioning**: Store and version prompt templates (provider-dependent)
+
+### App Observability (observops)
+
+- 📈 **Vendor-Agnostic**: Single API for OTLP, Datadog, New Relic, and Dynatrace
+- 📊 **Full Telemetry**: Metrics (counters, gauges, histograms), distributed traces, and structured logs
+- 📝 **slog Integration**: Trace-correlated logging with automatic context injection
+- ⚡ **Minimal Overhead**: No-op mode for disabled observability
+
+### Common
+
 - 🔀 **Context Propagation**: Automatic trace/span context propagation via `context.Context`
 - ⚙️ **Functional Options**: Clean, extensible configuration using the options pattern
 
@@ -26,6 +64,8 @@ go get github.com/plexusone/omniobserve
 ```
 
 ## Quick Start
+
+### LLM Observability (llmops)
 
 ```go
 package main
@@ -39,7 +79,6 @@ import (
 )
 
 func main() {
-    // Open a provider
     provider, err := llmops.Open("opik",
         llmops.WithAPIKey("your-api-key"),
         llmops.WithProjectName("my-project"),
@@ -51,49 +90,75 @@ func main() {
 
     ctx := context.Background()
 
-    // Start a trace
-    ctx, trace, err := provider.StartTrace(ctx, "chat-workflow",
+    ctx, trace, _ := provider.StartTrace(ctx, "chat-workflow",
         llmops.WithTraceInput(map[string]any{"query": "Hello, world!"}),
     )
-    if err != nil {
-        log.Fatal(err)
-    }
     defer trace.End()
 
-    // Start a span for the LLM call
-    ctx, span, err := provider.StartSpan(ctx, "gpt-4-completion",
+    _, span, _ := provider.StartSpan(ctx, "gpt-4-completion",
         llmops.WithSpanType(llmops.SpanTypeLLM),
         llmops.WithModel("gpt-4"),
-        llmops.WithProvider("openai"),
+    )
+
+    span.SetUsage(llmops.TokenUsage{TotalTokens: 18})
+    span.End()
+}
+```
+
+### App Observability (observops)
+
+```go
+package main
+
+import (
+    "context"
+    "log"
+    "log/slog"
+    "os"
+
+    "github.com/plexusone/omniobserve/observops"
+    _ "github.com/plexusone/omniobserve/observops/otlp"  // or datadog, newrelic, dynatrace
+)
+
+func main() {
+    provider, err := observops.Open("otlp",
+        observops.WithEndpoint("localhost:4317"),
+        observops.WithServiceName("my-service"),
+        observops.WithInsecure(),
     )
     if err != nil {
         log.Fatal(err)
     }
+    defer provider.Shutdown(context.Background())
 
-    // Record the LLM interaction
-    span.SetInput(map[string]any{
-        "messages": []map[string]string{
-            {"role": "user", "content": "Hello!"},
-        },
-    })
+    ctx := context.Background()
 
-    // ... call your LLM here ...
+    // Metrics
+    counter, _ := provider.Meter().Counter("requests_total",
+        observops.WithDescription("Total HTTP requests"),
+    )
+    counter.Add(ctx, 1, observops.WithAttributes(
+        observops.Attribute("method", "GET"),
+        observops.Attribute("path", "/api/users"),
+    ))
 
-    span.SetOutput(map[string]any{
-        "response": "Hello! How can I help you today?",
-    })
-    span.SetUsage(llmops.TokenUsage{
-        PromptTokens:     10,
-        CompletionTokens: 8,
-        TotalTokens:      18,
-    })
+    // Tracing
+    ctx, span := provider.Tracer().Start(ctx, "handle-request")
+    defer span.End()
 
-    span.End()
-    trace.SetOutput(map[string]any{"response": "Hello! How can I help you today?"})
+    // slog with trace correlation
+    handler := provider.SlogHandler(
+        observops.WithSlogLocalHandler(slog.NewJSONHandler(os.Stdout, nil)),
+    )
+    slog.SetDefault(slog.New(handler))
+
+    slog.InfoContext(ctx, "request processed")  // includes trace_id, span_id
 }
 ```
 
 ## Supported Providers
+
+### LLM Providers (llmops)
 
 | Provider | Package | Description |
 |----------|---------|-------------|
@@ -102,7 +167,16 @@ func main() {
 | **Phoenix** | `go-phoenix/llmops` | Arize Phoenix - OpenTelemetry-based |
 | **slog** | `omniobserve/llmops/slog` | Local structured logging for development/debugging |
 
-### Provider Capabilities
+### App Observability Providers (observops)
+
+| Provider | Package | Description |
+|----------|---------|-------------|
+| **OTLP** | `omniobserve/observops/otlp` | OpenTelemetry Protocol - vendor-agnostic |
+| **Datadog** | `omniobserve/observops/datadog` | Datadog APM via OTLP |
+| **New Relic** | `omniobserve/observops/newrelic` | New Relic via OTLP |
+| **Dynatrace** | `omniobserve/observops/dynatrace` | Dynatrace via OTLP |
+
+### LLM Provider Capabilities
 
 | Feature | Opik | Langfuse | Phoenix | slog |
 |---------|:----:|:--------:|:-------:|:----:|
@@ -115,6 +189,15 @@ func main() {
 | Distributed Tracing | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | Cost Tracking | :white_check_mark: | :white_check_mark: | :x: | :x: |
 | OpenTelemetry | :x: | :x: | :white_check_mark: | :x: |
+
+### observops Capabilities
+
+| Feature | OTLP | Datadog | New Relic | Dynatrace |
+|---------|:----:|:-------:|:---------:|:---------:|
+| Metrics | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Traces | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Logs | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| slog Handler | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Architecture
 
@@ -130,6 +213,17 @@ omniobserve/
 │   ├── errors.go        # Error definitions
 │   ├── metrics/         # Evaluation metrics (hallucination, relevance, etc.)
 │   └── langfuse/        # Langfuse provider adapter
+├── observops/           # App observability interfaces
+│   ├── observops.go     # Core interfaces (Provider, Meter, Tracer)
+│   ├── options.go       # Functional options
+│   ├── otlp/            # OTLP provider (vendor-agnostic)
+│   ├── datadog/         # Datadog provider
+│   ├── newrelic/        # New Relic provider
+│   └── dynatrace/       # Dynatrace provider
+├── sloghandler/         # slog.Handler implementations
+│   ├── dual.go          # Local + remote handler
+│   ├── fanout.go        # Multi-handler fanout
+│   └── trace.go         # Trace context injection
 ├── integrations/        # Integrations with LLM libraries
 │   └── omnillm/         # OmniLLM observability hook (separate module)
 ├── examples/            # Usage examples
@@ -138,7 +232,7 @@ omniobserve/
 └── sdk/                 # Provider-specific SDKs
     └── langfuse/        # Langfuse Go SDK
 
-# Provider adapters in standalone SDKs:
+# LLM provider adapters in standalone SDKs:
 # github.com/agentplexus/go-opik/llmops      # Opik provider
 # github.com/agentplexus/go-phoenix/llmops   # Phoenix provider
 ```
@@ -430,16 +524,3 @@ Contributions are welcome! Please feel free to submit issues and pull requests.
 ## License
 
 See [LICENSE](LICENSE) for details.
-
- [build-status-svg]: https://github.com/plexusone/omniobserve/actions/workflows/ci.yaml/badge.svg?branch=main
- [build-status-url]: https://github.com/plexusone/omniobserve/actions/workflows/ci.yaml
- [lint-status-svg]: https://github.com/plexusone/omniobserve/actions/workflows/lint.yaml/badge.svg?branch=main
- [lint-status-url]: https://github.com/plexusone/omniobserve/actions/workflows/lint.yaml
- [goreport-svg]: https://goreportcard.com/badge/github.com/plexusone/omniobserve
- [goreport-url]: https://goreportcard.com/report/github.com/plexusone/omniobserve
- [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/plexusone/omniobserve
- [docs-godoc-url]: https://pkg.go.dev/github.com/plexusone/omniobserve
- [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
- [license-url]: https://github.com/plexusone/omniobserve/blob/master/LICENSE
- [used-by-svg]: https://sourcegraph.com/github.com/plexusone/omniobserve/-/badge.svg
- [used-by-url]: https://sourcegraph.com/github.com/plexusone/omniobserve?badge
