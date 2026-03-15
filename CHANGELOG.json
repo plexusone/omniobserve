@@ -7,20 +7,59 @@
   "maintainers": ["plexusone"],
   "releases": [
     {
+      "version": "v0.8.0",
+      "date": "2026-03-14",
+      "highlights": [
+        { "description": "Unified entry point with HTTP middleware for single-line observability setup" },
+        { "description": "sloghandler package with dual output and automatic trace context injection" },
+        { "description": "Dynatrace provider and SlogHandler integration across all providers" }
+      ],
+      "added": [
+        { "description": "`omniobserve` package with unified entry point and HTTP middleware", "commit": "4dac7c2" },
+        { "description": "Context utilities: `L()`, `O()`, `S()` shortcuts for logger, observability, span", "commit": "4dac7c2" },
+        { "description": "`Trace()` and `TraceFunc[T]()` helpers for automatic span management", "commit": "4dac7c2" },
+        { "description": "HTTP middleware with spans, metrics, and X-Trace-ID propagation", "commit": "4dac7c2" },
+        { "description": "`sloghandler` package with dual output and trace context injection", "commit": "38ca9cc" },
+        { "description": "`observops/dynatrace` provider for Dynatrace via OTLP", "commit": "f671b7f" },
+        { "description": "`SlogHandler()` method on OTLP, Datadog, and New Relic providers", "commit": "a5f157a" },
+        { "description": "`SlogOption` and `SlogConfig` types for handler configuration", "commit": "afd573e" },
+        { "description": "`specs` package with OpenSLO, RED metrics, and service classes", "commit": "621ad2a" },
+        { "description": "`cmd/genspecs` CLI for JSON Schema generation", "commit": "00eaf6f" }
+      ],
+      "documentation": [
+        { "description": "Provider documentation in `docs/providers/`", "commit": "c1dfba6" },
+        { "description": "v0.8.0 release notes", "commit": "dac0c0e" },
+        { "description": "Mark Phase 4 unified entry point complete in TASKS.md", "commit": "c6d8e16" },
+        { "description": "Add design docs and task tracking", "commit": "29b54a0" }
+      ],
+      "build": [
+        { "description": "Update to shared CI workflows", "commit": "ce26e0d" },
+        { "description": "Rename workflow files with `go-` prefix", "commit": "6df4d52" }
+      ],
+      "dependencies": [
+        { "description": "Add OTLP HTTP exporters for metrics and traces", "commit": "f3519a2" },
+        { "description": "Add `github.com/OpenSLO/go-sdk` for OpenSLO support", "commit": "f3519a2" },
+        { "description": "Update OpenTelemetry SDK to v1.42.0", "commit": "52bfd9c" }
+      ]
+    },
+    {
       "version": "v0.7.0",
       "date": "2026-03-01",
       "highlights": [
         { "description": "Organization rename from agentplexus to plexusone" }
       ],
       "changed": [
-        { "description": "**Breaking**: Module path changed from `github.com/agentplexus/omniobserve` to `github.com/plexusone/omniobserve`" }
+        { "description": "**Breaking**: Module path changed from `github.com/agentplexus/omniobserve` to `github.com/plexusone/omniobserve`", "commit": "ea50958" }
       ],
       "documentation": [
-        { "description": "Updated all documentation to use new module path" }
+        { "description": "Updated all documentation to use new module path", "commit": "71234d3" },
+        { "description": "Fix version to v0.7.0 for organization rename", "commit": "e382d72" }
+      ],
+      "build": [
+        { "description": "Fix golangci-lint gofmt issues", "commit": "fed4e84" }
       ],
       "dependencies": [
-        { "description": "Upgraded `github.com/plexusone/omnillm` from v0.11.1 to v0.13.0" },
-        { "description": "Upgraded `github.com/plexusone/structured-evaluation` from v0.2.0 to v0.3.0" }
+        { "description": "Upgraded `github.com/plexusone/omnillm` from v0.11.1 to v0.12.0", "commit": "632387e" }
       ]
     },
     {
