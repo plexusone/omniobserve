@@ -10,10 +10,8 @@
       
       
       
-        <link rel="canonical" href="https://plexusone.github.io/omniobserve/releases/v0.5.0/">
+        <link rel="canonical" href="https://plexusone.github.io/omniobserve/design/PLAN_UNIFIED_OBSERVABILITY/">
       
-      
-        <link rel="prev" href="../v0.6.0/">
       
       
       
@@ -22,7 +20,7 @@
     
     
       
-        <title>v0.5.0 - OmniObserve</title>
+        <title>Implementation Plan: Unified slog + Observability - OmniObserve</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#release-notes-v050" class="md-skip">
+        <a href="#implementation-plan-unified-slog-observability" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              v0.5.0
+              Implementation Plan: Unified slog + Observability
             
           </span>
         </div>
@@ -1091,8 +1089,6 @@
       
   
   
-    
-  
   
   
     
@@ -1105,11 +1101,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
@@ -1125,7 +1123,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Releases
@@ -1139,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../../releases/changelog/" class="md-nav__link">
         
   
   
@@ -1162,7 +1160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../v0.7.0/" class="md-nav__link">
+      <a href="../../releases/v0.7.0/" class="md-nav__link">
         
   
   
@@ -1185,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../v0.6.0/" class="md-nav__link">
+      <a href="../../releases/v0.6.0/" class="md-nav__link">
         
   
   
@@ -1205,32 +1203,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    v0.5.0
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../releases/v0.5.0/" class="md-nav__link">
         
   
   
@@ -1241,206 +1217,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#breaking-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breaking Changes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Breaking Changes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#opik-and-phoenix-adapters-moved-to-standalone-sdks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Opik and Phoenix Adapters Moved to Standalone SDKs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#phoenix-sdk-removed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Phoenix SDK Removed
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#new-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      New Features
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="New Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#annotationmanager-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      AnnotationManager Interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enhanced-datasetmanager-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enhanced DatasetManager Interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prompt-modelprovider-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prompt Model/Provider Options
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#omnillm-hook-auto-create-traces" class="md-nav__link">
-    <span class="md-ellipsis">
-      OmniLLM Hook Auto-Create Traces
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trace-context-helpers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Trace Context Helpers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#evaluation-metrics-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      Evaluation Metrics Package
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migration-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migration Guide
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migration Guide">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#for-opik-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      For Opik Users
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-phoenix-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      For Phoenix Users
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-langfuse-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      For Langfuse Users
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#files-removed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Files Removed
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#files-modified" class="md-nav__link">
-    <span class="md-ellipsis">
-      Files Modified
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1489,28 +1265,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#breaking-changes" class="md-nav__link">
+  <a href="#phase-1-sloghandler-package-foundation" class="md-nav__link">
     <span class="md-ellipsis">
-      Breaking Changes
+      Phase 1: sloghandler Package Foundation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Breaking Changes">
+    <nav class="md-nav" aria-label="Phase 1: sloghandler Package Foundation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#opik-and-phoenix-adapters-moved-to-standalone-sdks" class="md-nav__link">
+  <a href="#tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Opik and Phoenix Adapters Moved to Standalone SDKs
+      Tasks
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#phoenix-sdk-removed" class="md-nav__link">
+  <a href="#deliverables" class="md-nav__link">
     <span class="md-ellipsis">
-      Phoenix SDK Removed
+      Deliverables
     </span>
   </a>
   
@@ -1522,64 +1298,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#new-features" class="md-nav__link">
+  <a href="#phase-2-observops-provider-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      New Features
+      Phase 2: observops Provider Integration
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="New Features">
+    <nav class="md-nav" aria-label="Phase 2: observops Provider Integration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#annotationmanager-interface" class="md-nav__link">
+  <a href="#tasks_1" class="md-nav__link">
     <span class="md-ellipsis">
-      AnnotationManager Interface
+      Tasks
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#enhanced-datasetmanager-interface" class="md-nav__link">
+  <a href="#deliverables_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Enhanced DatasetManager Interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prompt-modelprovider-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prompt Model/Provider Options
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#omnillm-hook-auto-create-traces" class="md-nav__link">
-    <span class="md-ellipsis">
-      OmniLLM Hook Auto-Create Traces
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trace-context-helpers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Trace Context Helpers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#evaluation-metrics-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      Evaluation Metrics Package
+      Deliverables
     </span>
   </a>
   
@@ -1591,46 +1331,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
+  <a href="#phase-3-additional-backend-providers" class="md-nav__link">
     <span class="md-ellipsis">
-      Dependencies
+      Phase 3: Additional Backend Providers
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migration-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migration Guide
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migration Guide">
+    <nav class="md-nav" aria-label="Phase 3: Additional Backend Providers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#for-opik-users" class="md-nav__link">
+  <a href="#tasks_2" class="md-nav__link">
     <span class="md-ellipsis">
-      For Opik Users
+      Tasks
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-phoenix-users" class="md-nav__link">
+  <a href="#deliverables_2" class="md-nav__link">
     <span class="md-ellipsis">
-      For Phoenix Users
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-langfuse-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      For Langfuse Users
+      Deliverables
     </span>
   </a>
   
@@ -1642,18 +1364,144 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#files-removed" class="md-nav__link">
+  <a href="#phase-4-unified-entry-point" class="md-nav__link">
     <span class="md-ellipsis">
-      Files Removed
+      Phase 4: Unified Entry Point
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 4: Unified Entry Point">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tasks_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliverables_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deliverables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-5-llmops-observops-correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 5: llmops + observops Correlation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 5: llmops + observops Correlation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tasks_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliverables_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deliverables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-structure-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Structure (Final)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#files-modified" class="md-nav__link">
+  <a href="#success-criteria" class="md-nav__link">
     <span class="md-ellipsis">
-      Files Modified
+      Success Criteria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Success Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risks-mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risks &amp; Mitigations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
     </span>
   </a>
   
@@ -1678,148 +1526,355 @@
   
 
 
-<h1 id="release-notes-v050">Release Notes v0.5.0<a class="headerlink" href="#release-notes-v050" title="Permanent link">&para;</a></h1>
-<p><strong>Release Date:</strong> January 3, 2026</p>
+<h1 id="implementation-plan-unified-slog-observability">Implementation Plan: Unified slog + Observability<a class="headerlink" href="#implementation-plan-unified-slog-observability" title="Permanent link">&para;</a></h1>
+<p><strong>Related TRD</strong>: <a href="../TRD_UNIFIED_SLOG_OBSERVABILITY/">TRD_UNIFIED_SLOG_OBSERVABILITY.md</a>
+<strong>Target Version</strong>: v0.3.0
+<strong>Date</strong>: 2026-03-03</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This release refactors the provider architecture so that LLM observability SDKs (Opik, Phoenix) own their own <code>llmops</code> adapters, rather than omniobserve importing them. This simplifies dependency management and allows each SDK to be updated independently.</p>
-<h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
-<h3 id="opik-and-phoenix-adapters-moved-to-standalone-sdks">Opik and Phoenix Adapters Moved to Standalone SDKs<a class="headerlink" href="#opik-and-phoenix-adapters-moved-to-standalone-sdks" title="Permanent link">&para;</a></h3>
-<p>The <code>llmops</code> adapters for Opik and Phoenix have been removed from omniobserve and moved to their respective SDK repositories:</p>
+<p>This plan outlines the implementation phases for integrating Go's <code>*slog.Logger</code> with OmniObserve's observability stack, enabling unified logging with automatic trace correlation and multi-backend export.</p>
+<hr />
+<h2 id="phase-1-sloghandler-package-foundation">Phase 1: sloghandler Package Foundation<a class="headerlink" href="#phase-1-sloghandler-package-foundation" title="Permanent link">&para;</a></h2>
+<p><strong>Goal</strong>: Create core slog.Handler implementation with trace correlation</p>
+<h3 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>1.1</strong> Create <code>sloghandler/handler.go</code></li>
+<li>Implement <code>slog.Handler</code> interface</li>
+<li>Support local + remote output</li>
+<li>Configure minimum levels per destination</li>
+<li>
+<p>Handle <code>WithAttrs()</code> and <code>WithGroup()</code></p>
+</li>
+<li>
+<p>[ ] <strong>1.2</strong> Create <code>sloghandler/trace.go</code></p>
+</li>
+<li>Extract trace context from <code>context.Context</code></li>
+<li>Support both observops.Span and OTel span</li>
+<li>
+<p>Add <code>trace_id</code> and <code>span_id</code> to log records</p>
+</li>
+<li>
+<p>[ ] <strong>1.3</strong> Create <code>sloghandler/options.go</code></p>
+</li>
+<li><code>WithLocalHandler(slog.Handler)</code></li>
+<li><code>WithRemoteLevel(slog.Level)</code></li>
+<li><code>WithoutTraceContext()</code></li>
+<li>
+<p><code>WithAttributeProcessor(...)</code></p>
+</li>
+<li>
+<p>[ ] <strong>1.4</strong> Create <code>sloghandler/fanout.go</code></p>
+</li>
+<li>Fan-out handler for multiple destinations</li>
+<li>Async option for non-blocking writes</li>
+<li>
+<p>Error handling strategy (continue on error)</p>
+</li>
+<li>
+<p>[ ] <strong>1.5</strong> Create <code>sloghandler/handler_test.go</code></p>
+</li>
+<li>Test level filtering</li>
+<li>Test trace context extraction</li>
+<li>Test WithAttrs/WithGroup chaining</li>
+<li>Benchmark handler overhead</li>
+</ul>
+<h3 id="deliverables">Deliverables<a class="headerlink" href="#deliverables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>sloghandler</code> package with full test coverage</li>
+<li>Benchmark showing &lt;100ns overhead per log call</li>
+</ul>
+<hr />
+<h2 id="phase-2-observops-provider-integration">Phase 2: observops Provider Integration<a class="headerlink" href="#phase-2-observops-provider-integration" title="Permanent link">&para;</a></h2>
+<p><strong>Goal</strong>: Add slog integration to observops.Provider interface</p>
+<h3 id="tasks_1">Tasks<a class="headerlink" href="#tasks_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>2.1</strong> Update <code>observops/observops.go</code></li>
+<li>Add <code>SlogHandler(opts ...SlogOption) slog.Handler</code> to Provider interface</li>
+<li>Add <code>Logger(opts ...SlogOption) *slog.Logger</code> convenience method</li>
+<li>
+<p>Define SlogOption type and common options</p>
+</li>
+<li>
+<p>[ ] <strong>2.2</strong> Update <code>observops/otlp/otlp.go</code></p>
+</li>
+<li>Implement <code>SlogHandler()</code> using internal Logger</li>
+<li>Wire up trace context from OTel SDK</li>
+<li>
+<p>Test with OTel Collector</p>
+</li>
+<li>
+<p>[ ] <strong>2.3</strong> Create <code>observops/noop/noop.go</code></p>
+</li>
+<li>No-op implementations for disabled mode</li>
+<li>
+<p><code>NoopSlogHandler()</code> returns <code>slog.DiscardHandler</code></p>
+</li>
+<li>
+<p>[ ] <strong>2.4</strong> Integration tests</p>
+</li>
+<li>End-to-end test with OTLP collector (docker-compose)</li>
+<li>Verify trace_id correlation in exported logs</li>
+<li>Test multi-level scenarios</li>
+</ul>
+<h3 id="deliverables_1">Deliverables<a class="headerlink" href="#deliverables_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Updated <code>observops.Provider</code> interface</li>
+<li>OTLP provider with slog integration</li>
+<li>Integration test suite</li>
+</ul>
+<hr />
+<h2 id="phase-3-additional-backend-providers">Phase 3: Additional Backend Providers<a class="headerlink" href="#phase-3-additional-backend-providers" title="Permanent link">&para;</a></h2>
+<p><strong>Goal</strong>: Implement Dynatrace, complete Datadog, add Prometheus</p>
+<h3 id="tasks_2">Tasks<a class="headerlink" href="#tasks_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>3.1</strong> Complete <code>observops/datadog/datadog.go</code></li>
+<li>Implement full Provider interface</li>
+<li>Add Datadog-specific configuration (site, API key)</li>
+<li>
+<p>Test with Datadog agent</p>
+</li>
+<li>
+<p>[ ] <strong>3.2</strong> Create <code>observops/dynatrace/dynatrace.go</code></p>
+</li>
+<li>Implement Provider wrapping OTLP</li>
+<li>Tenant/environment configuration</li>
+<li>Region selection (US, EU, Managed)</li>
+<li>
+<p>Test with Dynatrace</p>
+</li>
+<li>
+<p>[ ] <strong>3.3</strong> Create <code>observops/prometheus/prometheus.go</code></p>
+</li>
+<li>Metrics-only provider</li>
+<li>HTTP handler for <code>/metrics</code> endpoint</li>
+<li>
+<p>No-op for Tracer and Logger</p>
+</li>
+<li>
+<p>[ ] <strong>3.4</strong> Documentation</p>
+</li>
+<li>Provider setup guides in <code>docs/providers/</code></li>
+<li>Configuration reference</li>
+<li>Troubleshooting common issues</li>
+</ul>
+<h3 id="deliverables_2">Deliverables<a class="headerlink" href="#deliverables_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Three additional providers (Datadog, Dynatrace, Prometheus)</li>
+<li>Provider documentation</li>
+</ul>
+<hr />
+<h2 id="phase-4-unified-entry-point">Phase 4: Unified Entry Point<a class="headerlink" href="#phase-4-unified-entry-point" title="Permanent link">&para;</a></h2>
+<p><strong>Goal</strong>: Create high-level API combining observops + llmops + slog</p>
+<h3 id="tasks_3">Tasks<a class="headerlink" href="#tasks_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>4.1</strong> Create <code>omniobserve/unified.go</code></li>
+<li><code>UnifiedProvider</code> struct combining capabilities</li>
+<li><code>Open(name, opts...)</code> for single backend</li>
+<li>
+<p><code>OpenMulti(backends...)</code> for fan-out</p>
+</li>
+<li>
+<p>[ ] <strong>4.2</strong> Create <code>omniobserve/options.go</code></p>
+</li>
+<li>Unified configuration options</li>
+<li>Backend-specific option helpers</li>
+<li>
+<p>Slog integration options</p>
+</li>
+<li>
+<p>[ ] <strong>4.3</strong> Context utilities</p>
+</li>
+<li><code>ContextWithLogger(ctx, *slog.Logger)</code></li>
+<li><code>LoggerFromContext(ctx, fallback)</code></li>
+<li>
+<p>Consider re-exporting from mogo/slogutil</p>
+</li>
+<li>
+<p>[ ] <strong>4.4</strong> HTTP middleware</p>
+</li>
+<li>Request tracing middleware</li>
+<li>Logger injection middleware</li>
+<li>
+<p>Chi/Echo/Gin adapters</p>
+</li>
+<li>
+<p>[ ] <strong>4.5</strong> Examples</p>
+</li>
+<li>Basic usage example</li>
+<li>HTTP service example</li>
+<li>Multi-backend example</li>
+<li>LLM + APM combined example</li>
+</ul>
+<h3 id="deliverables_3">Deliverables<a class="headerlink" href="#deliverables_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Unified <code>omniobserve.Open()</code> API</li>
+<li>HTTP middleware</li>
+<li>Example applications</li>
+</ul>
+<hr />
+<h2 id="phase-5-llmops-observops-correlation">Phase 5: llmops + observops Correlation<a class="headerlink" href="#phase-5-llmops-observops-correlation" title="Permanent link">&para;</a></h2>
+<p><strong>Goal</strong>: Enable correlation between LLM traces and service traces</p>
+<h3 id="tasks_4">Tasks<a class="headerlink" href="#tasks_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>5.1</strong> Context bridge</li>
+<li>Share trace context between llmops and observops</li>
+<li>Option to link llmops trace as child of observops span</li>
+<li>
+<p>Automatic span linking</p>
+</li>
+<li>
+<p>[ ] <strong>5.2</strong> Unified span types</p>
+</li>
+<li>Map llmops.SpanType to observops semantic conventions</li>
+<li>Add LLM-specific attributes to observops spans</li>
+<li>
+<p>Support agent semantic conventions (semconv)</p>
+</li>
+<li>
+<p>[ ] <strong>5.3</strong> Combined provider</p>
+</li>
+<li>Single provider for both llmops and observops</li>
+<li>Unified configuration</li>
+<li>Coherent shutdown/flush</li>
+</ul>
+<h3 id="deliverables_4">Deliverables<a class="headerlink" href="#deliverables_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Correlated traces across LLM and service layers</li>
+<li>Combined provider option</li>
+</ul>
+<hr />
+<h2 id="file-structure-final">File Structure (Final)<a class="headerlink" href="#file-structure-final" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>omniobserve/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── sloghandler/
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── handler.go
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── handler_test.go
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   ├── trace.go
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   ├── options.go
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   └── fanout.go
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── observops/
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   ├── observops.go          # Updated with SlogHandler
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   ├── otlp/
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   │   └── otlp.go           # Updated
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   ├── datadog/
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   │   └── datadog.go        # Completed
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│   ├── dynatrace/
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│   │   └── dynatrace.go      # New
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│   └── prometheus/
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│       └── prometheus.go     # New
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├── llmops/
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│   └── (existing)
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>├── unified.go                # New unified entry
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>├── options.go                # Unified options
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>├── middleware/
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>│   ├── http.go
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>│   ├── chi.go
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>│   └── echo.go
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>└── examples/
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    ├── basic/
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    ├── http-service/
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    ├── multi-backend/
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    └── llm-with-apm/
+</code></pre></div>
+<hr />
+<h2 id="success-criteria">Success Criteria<a class="headerlink" href="#success-criteria" title="Permanent link">&para;</a></h2>
+<h3 id="functional">Functional<a class="headerlink" href="#functional" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] slog.Logger works with trace correlation</li>
+<li>[ ] Logs appear in OTLP collector with trace_id</li>
+<li>[ ] Multiple backends receive logs simultaneously</li>
+<li>[ ] Context-based logger injection works</li>
+</ul>
+<h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] &lt;100ns overhead per log call (vs plain slog)</li>
+<li>[ ] &lt;1MB additional memory for handler state</li>
+<li>[ ] Async fan-out doesn't block application</li>
+</ul>
+<h3 id="quality">Quality<a class="headerlink" href="#quality" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] &gt;80% test coverage for new packages</li>
+<li>[ ] All providers have integration tests</li>
+<li>[ ] Documentation for each provider</li>
+</ul>
+<hr />
+<h2 id="timeline">Timeline<a class="headerlink" href="#timeline" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Before (omniobserve v0.4.x)</th>
-<th>After (v0.5.0+)</th>
+<th>Phase</th>
+<th>Duration</th>
+<th>Dependencies</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>import _ "github.com/plexusone/omniobserve/llmops/opik"</code></td>
-<td><code>import _ "github.com/agentplexus/go-opik/llmops"</code></td>
+<td>Phase 1</td>
+<td>1 week</td>
+<td>None</td>
 </tr>
 <tr>
-<td><code>import _ "github.com/plexusone/omniobserve/llmops/phoenix"</code></td>
-<td><code>import _ "github.com/agentplexus/go-phoenix/llmops"</code></td>
+<td>Phase 2</td>
+<td>1 week</td>
+<td>Phase 1</td>
+</tr>
+<tr>
+<td>Phase 3</td>
+<td>2 weeks</td>
+<td>Phase 2</td>
+</tr>
+<tr>
+<td>Phase 4</td>
+<td>1 week</td>
+<td>Phase 2</td>
+</tr>
+<tr>
+<td>Phase 5</td>
+<td>1 week</td>
+<td>Phase 4</td>
 </tr>
 </tbody>
 </table>
-<p>The API remains identical - only the import paths change.</p>
-<h3 id="phoenix-sdk-removed">Phoenix SDK Removed<a class="headerlink" href="#phoenix-sdk-removed" title="Permanent link">&para;</a></h3>
-<p>The embedded Phoenix SDK (<code>sdk/phoenix/</code>) has been removed. Use the standalone SDK instead:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Before</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/sdk/phoenix&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// After</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/agentplexus/go-phoenix&quot;</span>
-</code></pre></div>
-<h2 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">&para;</a></h2>
-<h3 id="annotationmanager-interface">AnnotationManager Interface<a class="headerlink" href="#annotationmanager-interface" title="Permanent link">&para;</a></h3>
-<p>Added new <code>AnnotationManager</code> interface to the Provider for span/trace annotations:</p>
-<ul>
-<li><code>CreateAnnotation(ctx, annotation)</code> - Add annotations to spans or traces</li>
-<li><code>ListAnnotations(ctx, opts)</code> - Query annotations by span or trace IDs</li>
-</ul>
-<h3 id="enhanced-datasetmanager-interface">Enhanced DatasetManager Interface<a class="headerlink" href="#enhanced-datasetmanager-interface" title="Permanent link">&para;</a></h3>
-<p>Added new methods to <code>DatasetManager</code>:</p>
-<ul>
-<li><code>GetDatasetByID(ctx, id)</code> - Retrieve datasets by ID (in addition to by name)</li>
-<li><code>DeleteDataset(ctx, datasetID)</code> - Delete datasets</li>
-</ul>
-<h3 id="prompt-modelprovider-options">Prompt Model/Provider Options<a class="headerlink" href="#prompt-modelprovider-options" title="Permanent link">&para;</a></h3>
-<p>Added support for associating LLM model and provider with prompts:</p>
-<ul>
-<li><code>WithPromptModel(model)</code> - Set the LLM model name (e.g., "gpt-4")</li>
-<li><code>WithPromptProvider(provider)</code> - Set the LLM provider (e.g., "openai")</li>
-<li><code>Prompt.ModelName</code> and <code>Prompt.ModelProvider</code> fields</li>
-</ul>
-<h3 id="omnillm-hook-auto-create-traces">OmniLLM Hook Auto-Create Traces<a class="headerlink" href="#omnillm-hook-auto-create-traces" title="Permanent link">&para;</a></h3>
-<p>The OmniLLM observability hook now automatically creates a trace when none exists in context. This ensures LLM calls are always properly traced even when called outside an existing trace context.</p>
-<ul>
-<li><code>BeforeRequest</code> creates a trace if <code>TraceFromContext</code> returns false</li>
-<li><code>AfterResponse</code> ends the trace (if created by the hook)</li>
-<li>Streaming responses also properly end traces</li>
-</ul>
-<h3 id="trace-context-helpers">Trace Context Helpers<a class="headerlink" href="#trace-context-helpers" title="Permanent link">&para;</a></h3>
-<p>Added trace context tracking functions to <code>integrations/omnillm/</code>:</p>
-<ul>
-<li><code>contextWithTrace()</code> - Store a trace in context</li>
-<li><code>traceFromContext()</code> - Retrieve a trace from context</li>
-</ul>
-<p>These complement the existing span context functions.</p>
-<h3 id="evaluation-metrics-package">Evaluation Metrics Package<a class="headerlink" href="#evaluation-metrics-package" title="Permanent link">&para;</a></h3>
-<p>Added new <code>llmops/metrics</code> package with common evaluation metrics:</p>
-<p><strong>LLM-based metrics</strong> (require omnillm client):</p>
-<ul>
-<li><code>HallucinationMetric</code> - Detects unsupported claims in responses</li>
-<li><code>RelevanceMetric</code> - Evaluates document relevance to queries</li>
-<li><code>QACorrectnessMetric</code> - Checks answer correctness against references</li>
-<li><code>ToxicityMetric</code> - Detects harmful content</li>
-</ul>
-<p><strong>Code-based metrics</strong> (run locally):</p>
-<ul>
-<li><code>ExactMatchMetric</code> - Exact string comparison with options for case sensitivity and whitespace trimming</li>
-<li><code>RegexMetric</code> - Regex pattern matching</li>
-<li><code>ContainsMetric</code> - Substring presence check</li>
-</ul>
-<p>See <code>examples/evaluation/</code> for a complete usage example.</p>
-<p>Example usage:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/llmops/metrics&quot;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">// LLM-based metric</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">llm</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">metrics</span><span class="p">.</span><span class="nx">NewLLM</span><span class="p">(</span><span class="nx">omnillmClient</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;gpt-4o&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nx">hallucination</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">metrics</span><span class="p">.</span><span class="nx">NewHallucinationMetric</span><span class="p">(</span><span class="nx">llm</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">// Code-based metric</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nx">exactMatch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">metrics</span><span class="p">.</span><span class="nx">NewExactMatchMetric</span><span class="p">()</span>
-</code></pre></div>
-<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
-<p>Removed dependencies:</p>
-<ul>
-<li><code>github.com/agentplexus/go-comet-ml-opik</code> - No longer needed (adapter moved to go-opik)</li>
-</ul>
-<h2 id="migration-guide">Migration Guide<a class="headerlink" href="#migration-guide" title="Permanent link">&para;</a></h2>
-<h3 id="for-opik-users">For Opik Users<a class="headerlink" href="#for-opik-users" title="Permanent link">&para;</a></h3>
-<p>Update your import:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Before</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/llmops/opik&quot;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">// After</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kn">import</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="s">&quot;github.com/agentplexus/go-opik/llmops&quot;</span>
-</code></pre></div>
-<h3 id="for-phoenix-users">For Phoenix Users<a class="headerlink" href="#for-phoenix-users" title="Permanent link">&para;</a></h3>
-<p>Update your imports:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Before</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/llmops/phoenix&quot;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/sdk/phoenix&quot;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">// After</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kn">import</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="s">&quot;github.com/agentplexus/go-phoenix/llmops&quot;</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/agentplexus/go-phoenix&quot;</span>
-</code></pre></div>
-<h3 id="for-langfuse-users">For Langfuse Users<a class="headerlink" href="#for-langfuse-users" title="Permanent link">&para;</a></h3>
-<p>No changes required. Langfuse adapter remains in omniobserve:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/llmops/langfuse&quot;</span>
-</code></pre></div>
-<h2 id="files-removed">Files Removed<a class="headerlink" href="#files-removed" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>llmops/opik/opik.go</code></li>
-<li><code>llmops/opik/trace.go</code></li>
-<li><code>llmops/phoenix/phoenix.go</code></li>
-<li><code>llmops/phoenix/trace.go</code></li>
-<li><code>sdk/phoenix/client.go</code></li>
-<li><code>sdk/phoenix/context.go</code></li>
-<li><code>sdk/phoenix/errors.go</code></li>
-<li><code>sdk/phoenix/options.go</code></li>
-<li><code>sdk/phoenix/span.go</code></li>
-<li><code>sdk/phoenix/trace.go</code></li>
-<li><code>sdk/phoenix/types.go</code></li>
-</ul>
-<h2 id="files-modified">Files Modified<a class="headerlink" href="#files-modified" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>go.mod</code> - Removed go-comet-ml-opik dependency</li>
-<li><code>omniobserve.go</code> - Updated documentation with new import paths</li>
-<li><code>integrations/omnillm/context.go</code> - Added trace context helpers</li>
-</ul>
+<p><strong>Total</strong>: ~6 weeks</p>
+<hr />
+<h2 id="risks-mitigations">Risks &amp; Mitigations<a class="headerlink" href="#risks-mitigations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OTel SDK breaking changes</td>
+<td>High</td>
+<td>Pin specific versions, test with multiple</td>
+</tr>
+<tr>
+<td>Performance regression</td>
+<td>Medium</td>
+<td>Benchmark suite, profile hot paths</td>
+</tr>
+<tr>
+<td>Vendor API changes</td>
+<td>Medium</td>
+<td>Abstract behind interfaces, version tests</td>
+</tr>
+<tr>
+<td>slog API changes</td>
+<td>Low</td>
+<td>Go 1.21+ has stable slog</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Review and approve this plan</li>
+<li>Create GitHub issues for Phase 1 tasks</li>
+<li>Set up CI for new packages</li>
+<li>Begin Phase 1 implementation</li>
+</ol>
 
 
 

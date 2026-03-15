@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Unified Go library for LLM and ML observability">
+        <meta name="description" content="Unified Go library for observability - LLM tracing and app metrics/traces/logs">
       
       
       
@@ -424,7 +424,7 @@
   
   
   <span class="md-ellipsis">
-    Providers
+    LLM Providers
     
   </span>
   
@@ -435,7 +435,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Providers
+            LLM Providers
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -496,18 +496,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-providers" class="md-nav__link">
+  <a href="#llm-providers-llmops" class="md-nav__link">
     <span class="md-ellipsis">
-      Supported Providers
+      LLM Providers (llmops)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#provider-capabilities" class="md-nav__link">
+  <a href="#app-observability-providers-observops" class="md-nav__link">
     <span class="md-ellipsis">
-      Provider Capabilities
+      App Observability Providers (observops)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observops-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      observops Capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-provider-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Provider Capabilities
     </span>
   </a>
   
@@ -519,6 +537,30 @@
       Provider Registration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Provider Registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm-providers-llmops_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Providers (llmops)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-observability-providers-observops_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      App Observability Providers (observops)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -669,7 +711,7 @@
   
   
   <span class="md-ellipsis">
-    Features
+    App Observability (observops)
     
   </span>
   
@@ -679,6 +721,173 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            App Observability (observops)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="otlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OTLP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="datadog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datadog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="newrelic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    New Relic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dynatrace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dynatrace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sloghandler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sloghandler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Features
           </label>
@@ -805,10 +1014,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -821,8 +1030,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Integrations
           </label>
@@ -925,10 +1134,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -941,8 +1150,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Guides
           </label>
@@ -1022,10 +1231,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1038,8 +1247,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Releases
           </label>
@@ -1171,18 +1380,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-providers" class="md-nav__link">
+  <a href="#llm-providers-llmops" class="md-nav__link">
     <span class="md-ellipsis">
-      Supported Providers
+      LLM Providers (llmops)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#provider-capabilities" class="md-nav__link">
+  <a href="#app-observability-providers-observops" class="md-nav__link">
     <span class="md-ellipsis">
-      Provider Capabilities
+      App Observability Providers (observops)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observops-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      observops Capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-provider-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Provider Capabilities
     </span>
   </a>
   
@@ -1194,6 +1421,30 @@
       Provider Registration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Provider Registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm-providers-llmops_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Providers (llmops)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-observability-providers-observops_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      App Observability Providers (observops)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1226,8 +1477,14 @@
 
 
 <h1 id="providers">Providers<a class="headerlink" href="#providers" title="Permanent link">&para;</a></h1>
-<p>OmniObserve supports multiple observability backends through a unified interface. Each provider is registered via blank import and opened with <code>llmops.Open()</code>.</p>
-<h2 id="supported-providers">Supported Providers<a class="headerlink" href="#supported-providers" title="Permanent link">&para;</a></h2>
+<p>OmniObserve provides two provider systems:</p>
+<ul>
+<li><strong>llmops</strong> - LLM observability for AI/ML applications (tracing, evaluation, prompts, datasets)</li>
+<li><strong>observops</strong> - General application observability (metrics, traces, logs)</li>
+</ul>
+<hr />
+<h2 id="llm-providers-llmops">LLM Providers (llmops)<a class="headerlink" href="#llm-providers-llmops" title="Permanent link">&para;</a></h2>
+<p>For AI/ML application observability. Register via blank import and open with <code>llmops.Open()</code>.</p>
 <table>
 <thead>
 <tr>
@@ -1259,7 +1516,86 @@
 </tr>
 </tbody>
 </table>
-<h2 id="provider-capabilities">Provider Capabilities<a class="headerlink" href="#provider-capabilities" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="app-observability-providers-observops">App Observability Providers (observops)<a class="headerlink" href="#app-observability-providers-observops" title="Permanent link">&para;</a></h2>
+<p>For general application observability. Register via blank import and open with <code>observops.Open()</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="otlp/">OTLP</a></td>
+<td><code>omniobserve/observops/otlp</code></td>
+<td>OpenTelemetry Protocol - vendor-agnostic</td>
+</tr>
+<tr>
+<td><a href="datadog/">Datadog</a></td>
+<td><code>omniobserve/observops/datadog</code></td>
+<td>Datadog APM via OTLP</td>
+</tr>
+<tr>
+<td><a href="newrelic/">New Relic</a></td>
+<td><code>omniobserve/observops/newrelic</code></td>
+<td>New Relic via OTLP</td>
+</tr>
+<tr>
+<td><a href="dynatrace/">Dynatrace</a></td>
+<td><code>omniobserve/observops/dynatrace</code></td>
+<td>Dynatrace via OTLP</td>
+</tr>
+</tbody>
+</table>
+<p>See also: <a href="sloghandler/">sloghandler</a> for slog integration with trace correlation.</p>
+<hr />
+<h2 id="observops-capabilities">observops Capabilities<a class="headerlink" href="#observops-capabilities" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">OTLP</th>
+<th style="text-align: center;">Datadog</th>
+<th style="text-align: center;">New Relic</th>
+<th style="text-align: center;">Dynatrace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metrics</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+<tr>
+<td>Traces</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+<tr>
+<td>Logs</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+<tr>
+<td>slog Handler</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="llm-provider-capabilities">LLM Provider Capabilities<a class="headerlink" href="#llm-provider-capabilities" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1337,7 +1673,7 @@
 </tbody>
 </table>
 <h2 id="provider-registration">Provider Registration<a class="headerlink" href="#provider-registration" title="Permanent link">&para;</a></h2>
-<p>Providers are registered via blank imports:</p>
+<h3 id="llm-providers-llmops_1">LLM Providers (llmops)<a class="headerlink" href="#llm-providers-llmops_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="s">&quot;github.com/plexusone/omniobserve/llmops&quot;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -1351,11 +1687,30 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">// Open by name</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nx">provider</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">llmops</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="s">&quot;opik&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">llmops</span><span class="p">.</span><span class="nx">WithAPIKey</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">))</span>
 </code></pre></div>
+<h3 id="app-observability-providers-observops_1">App Observability Providers (observops)<a class="headerlink" href="#app-observability-providers-observops_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="s">&quot;github.com/plexusone/omniobserve/observops&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="c1">// Register one provider</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nx">_</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/observops/otlp&quot;</span><span class="w">     </span><span class="c1">// OTLP</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="c1">// or</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nx">_</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/observops/datadog&quot;</span><span class="w">  </span><span class="c1">// Datadog</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// or</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nx">_</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/observops/newrelic&quot;</span><span class="w"> </span><span class="c1">// New Relic</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1">// Open by name</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nx">provider</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">observops</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="s">&quot;otlp&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nx">observops</span><span class="p">.</span><span class="nx">WithEndpoint</span><span class="p">(</span><span class="s">&quot;localhost:4317&quot;</span><span class="p">),</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="nx">observops</span><span class="p">.</span><span class="nx">WithServiceName</span><span class="p">(</span><span class="s">&quot;my-service&quot;</span><span class="p">),</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">)</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="k">defer</span><span class="w"> </span><span class="nx">provider</span><span class="p">.</span><span class="nx">Shutdown</span><span class="p">(</span><span class="nx">ctx</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="direct-sdk-access">Direct SDK Access<a class="headerlink" href="#direct-sdk-access" title="Permanent link">&para;</a></h2>
 <p>For provider-specific features, use the underlying SDKs directly:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/sdk/langfuse&quot;</span><span class="w">  </span><span class="c1">// Langfuse SDK</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/agentplexus/go-opik&quot;</span><span class="w">                   </span><span class="c1">// Opik SDK</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/agentplexus/go-phoenix&quot;</span><span class="w">                </span><span class="c1">// Phoenix SDK</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniobserve/sdk/langfuse&quot;</span><span class="w">  </span><span class="c1">// Langfuse SDK</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/agentplexus/go-opik&quot;</span><span class="w">                   </span><span class="c1">// Opik SDK</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/agentplexus/go-phoenix&quot;</span><span class="w">                </span><span class="c1">// Phoenix SDK</span>
 </code></pre></div>
 
 
