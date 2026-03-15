@@ -2,6 +2,7 @@ package newrelic
 
 import (
 	"context"
+	"log/slog"
 
 	"github.com/plexusone/omniobserve/observops"
 )
@@ -21,6 +22,10 @@ func (p *noopProvider) Meter() observops.Meter { return &noopMeter{} }
 func (p *noopProvider) Tracer() observops.Tracer { return &noopTracer{} }
 
 func (p *noopProvider) Logger() observops.Logger { return &noopLogger{} }
+
+func (p *noopProvider) SlogHandler(opts ...observops.SlogOption) slog.Handler {
+	return observops.NoopSlogHandler()
+}
 
 func (p *noopProvider) Shutdown(ctx context.Context) error { return nil }
 

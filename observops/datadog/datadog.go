@@ -47,6 +47,7 @@ package datadog
 
 import (
 	"context"
+	"log/slog"
 	"sync"
 	"time"
 
@@ -349,6 +350,17 @@ func (p *Provider) Tracer() observops.Tracer {
 // Logger returns the structured logger.
 func (p *Provider) Logger() observops.Logger {
 	return p.logger
+}
+
+// SlogHandler returns an slog.Handler that integrates with this provider.
+// The handler sends logs to Datadog while optionally also forwarding
+// to a local handler for console/file output.
+func (p *Provider) SlogHandler(opts ...observops.SlogOption) slog.Handler {
+	cfg := observops.ApplySlogOptions(opts...)
+	if cfg.Disabled {
+		return observops.NoopSlogHandler()
+	}
+	return observops.NewLoggerSlogHandler(p.logger, cfg)
 }
 
 // Shutdown gracefully shuts down the provider.
