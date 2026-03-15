@@ -4,6 +4,47 @@ All notable changes to OmniObserve are documented here.
 
 This changelog follows [Semantic Versioning](https://semver.org/) and is generated from [CHANGELOG.json](https://github.com/plexusone/omniobserve/blob/main/CHANGELOG.json) using [schangelog](https://github.com/grokify/structured-changelog).
 
+## [v0.8.0](v0.8.0.md) - 2026-03
+
+### Highlights
+
+- New `sloghandler` package with dual output and trace context injection
+- Dynatrace provider for full Dynatrace observability via OTLP
+- SlogHandler integration for all observops providers
+- Observability specs package with OpenSLO and RED metrics support
+
+### Added
+
+- `sloghandler` package with dual output (local + remote) and automatic trace context injection
+- `observops/dynatrace` provider for Dynatrace via OTLP/HTTP
+- `SlogHandler()` method on OTLP, Datadog, New Relic, and Dynatrace providers
+- `SlogOption` and `SlogConfig` types for slog handler configuration
+- `specs` package with OpenSLO, RED metrics, and service class templates
+- `cmd/genspecs` CLI for JSON Schema generation from Go types
+- Provider documentation in `docs/providers/`
+
+### Dependencies
+
+- Added OTLP HTTP exporters for metrics and traces
+- Added OpenSLO Go SDK
+- Added jsonschema for schema generation
+- Updated Go to 1.25.5
+
+## [v0.7.0](v0.7.0.md) - 2026-03-01
+
+### Highlights
+
+- Organization rename from agentplexus to plexusone
+
+### Changed
+
+- **BREAKING**: Module path changed from `github.com/agentplexus/omniobserve` to `github.com/plexusone/omniobserve`
+
+### Dependencies
+
+- Upgraded `github.com/plexusone/omnillm` to v0.13.0
+- Upgraded `github.com/plexusone/structured-evaluation` to v0.3.0
+
 ## [v0.6.0](v0.6.0.md) - 2026-02-22
 
 ### Highlights
