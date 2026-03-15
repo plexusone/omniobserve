@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/plexusone/omniobserve/specs/golden/definition",
+  "properties": {
+    "service_name": {
+      "type": "string"
+    },
+    "latency": {
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "metric": {
+          "type": "string"
+        },
+        "aggregation": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "source",
+        "metric",
+        "aggregation"
+      ]
+    },
+    "traffic": {
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "metric": {
+          "type": "string"
+        },
+        "aggregation": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "source",
+        "metric",
+        "aggregation"
+      ]
+    },
+    "errors": {
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "metric": {
+          "type": "string"
+        },
+        "filter": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "source",
+        "metric"
+      ]
+    },
+    "saturation": {
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "metrics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "source",
+        "metrics"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "service_name",
+    "latency",
+    "traffic",
+    "errors",
+    "saturation"
+  ]
+}

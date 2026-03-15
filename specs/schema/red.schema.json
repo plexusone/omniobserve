@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/plexusone/omniobserve/specs/red/definition",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "rate": {
+      "properties": {
+        "metric": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "golden_signal": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    },
+    "errors": {
+      "properties": {
+        "metric": {
+          "type": "string"
+        },
+        "filter": {
+          "type": "string"
+        },
+        "sli_candidate": {
+          "type": "boolean"
+        },
+        "golden_signal": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    },
+    "duration": {
+      "properties": {
+        "metric": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "buckets": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "aggregation": {
+          "type": "string"
+        },
+        "sli_candidate": {
+          "type": "boolean"
+        },
+        "golden_signal": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    },
+    "attributes": {
+      "items": {
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "required": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "key"
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "name",
+    "rate",
+    "errors",
+    "duration"
+  ]
+}

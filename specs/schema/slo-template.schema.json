@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/plexusone/omniobserve/specs/classes/slo-template",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "indicator_type": {
+      "type": "string"
+    },
+    "defaults": {
+      "properties": {
+        "latency": {
+          "type": "string"
+        },
+        "availability": {
+          "type": "number"
+        },
+        "error_rate": {
+          "type": "number"
+        },
+        "time_window": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "name",
+    "indicator_type",
+    "defaults"
+  ]
+}
