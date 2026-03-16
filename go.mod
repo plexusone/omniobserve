@@ -6,7 +6,7 @@ require (
 	entgo.io/ent v0.14.5
 	github.com/OpenSLO/go-sdk v0.9.1
 	github.com/google/uuid v1.6.0
-	github.com/grokify/mogo v0.73.5
+	github.com/grokify/mogo v0.74.0
 	github.com/grokify/slogo v0.3.0
 	github.com/invopop/jsonschema v0.13.0
 	github.com/lib/pq v1.11.2
