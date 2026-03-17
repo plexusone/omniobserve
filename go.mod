@@ -10,7 +10,7 @@ require (
 	github.com/grokify/slogo v0.3.0
 	github.com/invopop/jsonschema v0.13.0
 	github.com/lib/pq v1.11.2
-	github.com/plexusone/omnillm v0.13.0
+	github.com/plexusone/omnillm v0.14.0
 	github.com/plexusone/structured-evaluation v0.3.0
 	go.opentelemetry.io/otel v1.42.0
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v1.42.0
