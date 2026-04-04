@@ -3,7 +3,7 @@ module github.com/plexusone/omniobserve
 go 1.25.5
 
 require (
-	entgo.io/ent v0.14.5
+	entgo.io/ent v0.14.6
 	github.com/OpenSLO/go-sdk v0.9.1
 	github.com/google/uuid v1.6.0
 	github.com/grokify/mogo v0.74.0
