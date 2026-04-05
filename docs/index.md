@@ -2,10 +2,6 @@
 
 **Unified Go library for observability**
 
-[![Build Status](https://github.com/plexusone/omniobserve/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/plexusone/omniobserve/actions/workflows/ci.yaml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/plexusone/omniobserve)](https://goreportcard.com/report/github.com/plexusone/omniobserve)
-[![Go Reference](https://pkg.go.dev/badge/github.com/plexusone/omniobserve.svg)](https://pkg.go.dev/github.com/plexusone/omniobserve)
-
 OmniObserve provides vendor-agnostic abstraction layers for observability, enabling you to instrument your applications once and seamlessly switch between different backends without code changes.
 
 ## Two Provider Systems
