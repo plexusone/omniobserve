@@ -9,7 +9,7 @@ require (
 	github.com/grokify/mogo v0.74.0
 	github.com/grokify/slogo v0.3.0
 	github.com/invopop/jsonschema v0.13.0
-	github.com/lib/pq v1.12.2
+	github.com/lib/pq v1.12.3
 	github.com/plexusone/omnillm v0.14.0
 	github.com/plexusone/structured-evaluation v0.3.0
 	go.opentelemetry.io/otel v1.43.0
