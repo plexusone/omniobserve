@@ -6,7 +6,7 @@ require (
 	entgo.io/ent v0.14.6
 	github.com/OpenSLO/go-sdk v0.9.1
 	github.com/google/uuid v1.6.0
-	github.com/grokify/mogo v0.74.1
+	github.com/grokify/mogo v0.74.2
 	github.com/grokify/slogo v0.3.0
 	github.com/invopop/jsonschema v0.13.0
 	github.com/lib/pq v1.12.3
@@ -109,7 +109,7 @@ require (
 	go.yaml.in/yaml/v2 v2.4.4 // indirect
 	golang.org/x/crypto v0.50.0 // indirect
 	golang.org/x/exp v0.0.0-20260312153236-7ab1446f8b90 // indirect
-	golang.org/x/image v0.38.0 // indirect
+	golang.org/x/image v0.39.0 // indirect
 	golang.org/x/mod v0.34.0 // indirect
 	golang.org/x/net v0.53.0 // indirect
 	golang.org/x/sync v0.20.0 // indirect
