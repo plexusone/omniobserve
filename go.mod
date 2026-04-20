@@ -10,7 +10,7 @@ require (
 	github.com/grokify/slogo v0.3.0
 	github.com/invopop/jsonschema v0.13.0
 	github.com/lib/pq v1.12.3
-	github.com/plexusone/omnillm v0.15.1
+	github.com/plexusone/omnillm v0.15.2
 	github.com/plexusone/structured-evaluation v0.3.0
 	go.opentelemetry.io/otel v1.43.0
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v1.43.0
@@ -82,11 +82,11 @@ require (
 	github.com/olekukonko/ll v0.1.7 // indirect
 	github.com/olekukonko/tablewriter v1.1.4 // indirect
 	github.com/openai/openai-go v1.12.0 // indirect
+	github.com/plexusone/omni-openai v0.2.0 // indirect
 	github.com/plexusone/omnillm-anthropic v0.1.0 // indirect
 	github.com/plexusone/omnillm-bedrock v0.5.0 // indirect
 	github.com/plexusone/omnillm-core v0.15.0 // indirect
 	github.com/plexusone/omnillm-gemini v0.1.0 // indirect
-	github.com/plexusone/omnillm-openai v0.1.0 // indirect
 	github.com/richardlehane/mscfb v1.0.6 // indirect
 	github.com/richardlehane/msoleps v1.0.6 // indirect
 	github.com/tidwall/gjson v1.18.0 // indirect
