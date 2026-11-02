@@ -11,7 +11,7 @@ require (
 	github.com/invopop/jsonschema v0.14.0
 	github.com/lib/pq v1.12.3
 	github.com/plexusone/omnillm v0.17.0
-	github.com/plexusone/structured-evaluation v0.14.0
+	github.com/plexusone/structured-evaluation v0.15.0
 	github.com/prometheus/client_golang v1.25.0
 	go.opentelemetry.io/contrib/bridges/otelslog v0.21.0
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.72.0
