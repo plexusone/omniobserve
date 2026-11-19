@@ -179,8 +179,8 @@ github.com/plexusone/omni-openai v0.7.1 h1:bx3z9GIYcWP/3de4bf5pwIxlssZiDXpaW+SR8
 github.com/plexusone/omni-openai v0.7.1/go.mod h1:gng3oDHGzzD4ZXJwvuxqnTYfj5znSwvrmfRGdThdaQk=
 github.com/plexusone/omni-openrouter v0.2.1 h1:OD8v5MPtlDdOfSon8rc0LI30AwHuyMLk4zsDd21p8vU=
 github.com/plexusone/omni-openrouter v0.2.1/go.mod h1:uz0FMA66kQ8RdAzamIqps9UJ205KH6ZXoG9mgm8jPxc=
-github.com/plexusone/omnillm v0.17.0 h1:UXnDDOjZnSnVTixhS0OxsMW6LmX7lToJ5HmTdADCNw0=
-github.com/plexusone/omnillm v0.17.0/go.mod h1:6qEWL2WuGMrB+TxMsuNYLVpORO0nF7wLfWRfN4feBzY=
+github.com/plexusone/omnillm v0.17.1 h1:bEoCk3/1Jk72k78sKUJpV/JcDdZe1YIgOYZaRGES4PU=
+github.com/plexusone/omnillm v0.17.1/go.mod h1:uMZDU0L09DA+nHfz+7SeS/tLutJhOnUdmhDbUWvDm1M=
 github.com/plexusone/omnillm-core v0.18.1 h1:Pp/F7L9edGlPtd/OvTq39/H2XttIXRN9K5cf+KcARW0=
 github.com/plexusone/omnillm-core v0.18.1/go.mod h1:qX6C1tOcLoDa6C4sgMUUgjX/zjM9CfBXG/pmnK7lveA=
 github.com/plexusone/structured-evaluation v0.14.0 h1:gACNOB//bGD78F8WQlUhCtfBNY4FcRPxcLsbEWGzBc0=
